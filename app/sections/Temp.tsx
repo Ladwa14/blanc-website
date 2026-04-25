@@ -63,6 +63,20 @@ const handleTouchEnd = (e: TouchEvent) => {
   }
 };
 
+
+const handleTouchMove = (e: TouchEvent) => {
+  const section = containerRef.current;
+  if (!section) return;
+
+  const rect = section.getBoundingClientRect();
+  const inView =
+    rect.top <= 0 && rect.bottom >= window.innerHeight;
+
+  if (inView) {
+    e.preventDefault(); // 🔥 THIS STOPS PAGE SCROLL
+  }
+};
+
   const handleWheel = (e: WheelEvent) => {
     const section = containerRef.current;
     if (!section) return;
@@ -108,11 +122,13 @@ const handleTouchEnd = (e: TouchEvent) => {
 
 window.addEventListener("touchstart", handleTouchStart, { passive: false });
 window.addEventListener("touchend", handleTouchEnd, { passive: false });
+window.addEventListener("touchmove", handleTouchMove, { passive: false }); // 🔥 ADD THIS
 
- return () => {
+return () => {
   window.removeEventListener("wheel", handleWheel);
   window.removeEventListener("touchstart", handleTouchStart);
   window.removeEventListener("touchend", handleTouchEnd);
+  window.removeEventListener("touchmove", handleTouchMove); // 🔥 ADD THIS
   document.body.style.overflow = "auto";
 };
 }, [activeIndex]);
