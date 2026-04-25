@@ -20,6 +20,57 @@ export default function Hero() {
   const isScrolling = useRef(false);
 
 useEffect(() => {
+
+
+  let startY = 0;
+
+const handleTouchStart = (e: TouchEvent) => {
+  startY = e.touches[0].clientY;
+};
+
+const handleTouchEnd = (e: TouchEvent) => {
+  const endY = e.changedTouches[0].clientY;
+  const diff = startY - endY;
+
+  const section = containerRef.current;
+  if (!section) return;
+
+  const rect = section.getBoundingClientRect();
+  const inView =
+    rect.top <= 0 && rect.bottom >= window.innerHeight;
+
+  if (!inView) return;
+
+  if (isScrolling.current) return;
+
+  const isLast = activeIndex === imageList.length - 1;
+  const isFirst = activeIndex === 0;
+
+  if ((isLast && diff > 0) || (isFirst && diff < 0)) return;
+
+  if (Math.abs(diff) > 50) { // swipe threshold
+    isScrolling.current = true;
+
+    setActiveIndex((prev) => {
+      return diff > 0
+        ? Math.min(prev + 1, imageList.length - 1)
+        : Math.max(prev - 1, 0);
+    });
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 600);
+  }
+};
+
+
+window.addEventListener("touchstart", handleTouchStart);
+window.addEventListener("touchend", handleTouchEnd);
+
+
+window.removeEventListener("touchstart", handleTouchStart);
+window.removeEventListener("touchend", handleTouchEnd);
+
   const handleWheel = (e: WheelEvent) => {
     const section = containerRef.current;
     if (!section) return;
