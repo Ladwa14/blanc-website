@@ -22,7 +22,7 @@ export default function Hero() {
 useEffect(() => {
 
 
-  let startY = 0;
+let startY = 0;
 
 const handleTouchStart = (e: TouchEvent) => {
   startY = e.touches[0].clientY;
@@ -40,7 +40,7 @@ const handleTouchEnd = (e: TouchEvent) => {
     rect.top <= 0 && rect.bottom >= window.innerHeight;
 
   if (!inView) return;
-
+  e.preventDefault();
   if (isScrolling.current) return;
 
   const isLast = activeIndex === imageList.length - 1;
@@ -48,28 +48,20 @@ const handleTouchEnd = (e: TouchEvent) => {
 
   if ((isLast && diff > 0) || (isFirst && diff < 0)) return;
 
-  if (Math.abs(diff) > 50) { // swipe threshold
+  if (Math.abs(diff) > 30) {
     isScrolling.current = true;
 
-    setActiveIndex((prev) => {
-      return diff > 0
+    setActiveIndex((prev) =>
+      diff > 0
         ? Math.min(prev + 1, imageList.length - 1)
-        : Math.max(prev - 1, 0);
-    });
+        : Math.max(prev - 1, 0)
+    );
 
     setTimeout(() => {
       isScrolling.current = false;
     }, 600);
   }
 };
-
-
-window.addEventListener("touchstart", handleTouchStart);
-window.addEventListener("touchend", handleTouchEnd);
-
-
-window.removeEventListener("touchstart", handleTouchStart);
-window.removeEventListener("touchend", handleTouchEnd);
 
   const handleWheel = (e: WheelEvent) => {
     const section = containerRef.current;
@@ -114,10 +106,15 @@ window.removeEventListener("touchend", handleTouchEnd);
     passive: false,
   });
 
-  return () => {
-    window.removeEventListener("wheel", handleWheel);
-    document.body.style.overflow = "auto";
-  };
+window.addEventListener("touchstart", handleTouchStart, { passive: false });
+window.addEventListener("touchend", handleTouchEnd, { passive: false });
+
+ return () => {
+  window.removeEventListener("wheel", handleWheel);
+  window.removeEventListener("touchstart", handleTouchStart);
+  window.removeEventListener("touchend", handleTouchEnd);
+  document.body.style.overflow = "auto";
+};
 }, [activeIndex]);
 
   return (
