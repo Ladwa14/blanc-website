@@ -72,9 +72,21 @@ const handleTouchMove = (e: TouchEvent) => {
   const inView =
     rect.top <= 0 && rect.bottom >= window.innerHeight;
 
-  if (inView) {
-    e.preventDefault(); // 🔥 THIS STOPS PAGE SCROLL
+  if (!inView) return;
+
+  const isLast = activeIndex === imageList.length - 1;
+  const isFirst = activeIndex === 0;
+
+  const currentY = e.touches[0].clientY;
+  const diff = startY - currentY;
+
+  // 👉 Allow normal scroll at edges
+  if ((isLast && diff > 0) || (isFirst && diff < 0)) {
+    return; // 🔥 DO NOT prevent scroll
   }
+
+  // 👉 Otherwise lock scroll
+  e.preventDefault();
 };
 
   const handleWheel = (e: WheelEvent) => {
