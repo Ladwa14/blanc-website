@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Footer from "../sections/Footer"; // ✅ use your existing footer
 
 const images = [
-    "/the_craft_1.webp",
+    
   "/Blanc_website_2.webp",
   "/Smile.webp",
   "/Above_the_fold_3.webp",
