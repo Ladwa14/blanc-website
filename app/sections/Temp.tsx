@@ -10,11 +10,11 @@ export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const imageList = [
-    "/hero_image.png",
-    "/checkup-dentist-tool-instrument-young.webp",
-    "/dentist-examines-patient-s-teeth.webp",
-    "/female-patient-flossing-her-teeth.webp",
-    "/portrait-young-woman-dentist.webp"
+    "/Blanc_website_2.webp",
+    "/Smile.webp",
+    "/Above_the_fold_3.webp",
+    "/Above_the_fold_4.webp",
+    "/Above_the_fold_5.webp"
   ];
 
   const isScrolling = useRef(false);
