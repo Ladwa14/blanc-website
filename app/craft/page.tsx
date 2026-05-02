@@ -19,52 +19,97 @@ export default function Page() {
   const activeIndexRef = useRef(0);
   const isScrolling = useRef(false);
 
-  useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
-      const section = containerRef.current;
-      if (!section) return;
+useEffect(() => {
+  let touchStartY = 0;
 
-      const rect = section.getBoundingClientRect();
-      const inView = rect.top <= 0 && rect.bottom >= window.innerHeight;
-      if (!inView) return;
+  const handleWheel = (e: WheelEvent) => {
+    const section = containerRef.current;
+    if (!section) return;
 
-      if (
-        (e.deltaY > 0 && activeIndexRef.current === images.length - 1) ||
-        (e.deltaY < 0 && activeIndexRef.current === 0)
-      ) {
-        return;
-      }
+    const rect = section.getBoundingClientRect();
+    const inView = rect.top <= 0 && rect.bottom >= window.innerHeight;
+    if (!inView) return;
 
-      e.preventDefault();
+    if (
+      (e.deltaY > 0 && activeIndexRef.current === images.length - 1) ||
+      (e.deltaY < 0 && activeIndexRef.current === 0)
+    ) {
+      return;
+    }
 
-      if (isScrolling.current) return;
-      isScrolling.current = true;
+    e.preventDefault();
 
-      if (e.deltaY > 0) {
-        setActiveIndex((prev) => {
-          const next = Math.min(prev + 1, images.length - 1);
-          activeIndexRef.current = next;
-          return next;
-        });
-      } else {
-        setActiveIndex((prev) => {
-          const next = Math.max(prev - 1, 0);
-          activeIndexRef.current = next;
-          return next;
-        });
-      }
+    if (isScrolling.current) return;
+    isScrolling.current = true;
 
-      setTimeout(() => {
-        isScrolling.current = false;
-      }, 500);
-    };
+    if (e.deltaY > 0) {
+      updateIndex(1);
+    } else {
+      updateIndex(-1);
+    }
+  };
 
-    window.addEventListener("wheel", handleWheel, { passive: false });
+  const handleTouchStart = (e: TouchEvent) => {
+    touchStartY = e.touches[0].clientY;
+  };
 
-    return () => {
-      window.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
+  const handleTouchEnd = (e: TouchEvent) => {
+    const section = containerRef.current;
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
+    const inView = rect.top <= 0 && rect.bottom >= window.innerHeight;
+    if (!inView) return;
+
+    const touchEndY = e.changedTouches[0].clientY;
+    const diff = touchStartY - touchEndY;
+
+    // 🔥 swipe threshold
+    if (Math.abs(diff) < 50) return;
+
+    if (
+      (diff > 0 && activeIndexRef.current === images.length - 1) ||
+      (diff < 0 && activeIndexRef.current === 0)
+    ) {
+      return;
+    }
+
+    if (isScrolling.current) return;
+    isScrolling.current = true;
+
+    if (diff > 0) {
+      updateIndex(1); // swipe up
+    } else {
+      updateIndex(-1); // swipe down
+    }
+  };
+
+  const updateIndex = (direction: number) => {
+    setActiveIndex((prev) => {
+      const next =
+        direction > 0
+          ? Math.min(prev + 1, images.length - 1)
+          : Math.max(prev - 1, 0);
+
+      activeIndexRef.current = next;
+      return next;
+    });
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 500);
+  };
+
+  window.addEventListener("wheel", handleWheel, { passive: false });
+  window.addEventListener("touchstart", handleTouchStart);
+  window.addEventListener("touchend", handleTouchEnd);
+
+  return () => {
+    window.removeEventListener("wheel", handleWheel);
+    window.removeEventListener("touchstart", handleTouchStart);
+    window.removeEventListener("touchend", handleTouchEnd);
+  };
+}, []);
 
   return (
     <>
