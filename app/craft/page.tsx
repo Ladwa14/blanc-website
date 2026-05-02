@@ -20,7 +20,8 @@ export default function Page() {
   const isScrolling = useRef(false);
 
 useEffect(() => {
-  let touchStartY = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   const handleWheel = (e: WheelEvent) => {
     const section = containerRef.current;
@@ -42,29 +43,19 @@ useEffect(() => {
     if (isScrolling.current) return;
     isScrolling.current = true;
 
-    if (e.deltaY > 0) {
-      updateIndex(1);
-    } else {
-      updateIndex(-1);
-    }
+    updateIndex(e.deltaY > 0 ? 1 : -1);
   };
 
   const handleTouchStart = (e: TouchEvent) => {
-    touchStartY = e.touches[0].clientY;
+    touchStartX = e.touches[0].clientX;
   };
 
   const handleTouchEnd = (e: TouchEvent) => {
-    const section = containerRef.current;
-    if (!section) return;
+    touchEndX = e.changedTouches[0].clientX;
 
-    const rect = section.getBoundingClientRect();
-    const inView = rect.top <= 0 && rect.bottom >= window.innerHeight;
-    if (!inView) return;
+    const diff = touchStartX - touchEndX;
 
-    const touchEndY = e.changedTouches[0].clientY;
-    const diff = touchStartY - touchEndY;
-
-    // 🔥 swipe threshold
+    // 🔥 ignore small swipes
     if (Math.abs(diff) < 50) return;
 
     if (
@@ -77,11 +68,7 @@ useEffect(() => {
     if (isScrolling.current) return;
     isScrolling.current = true;
 
-    if (diff > 0) {
-      updateIndex(1); // swipe up
-    } else {
-      updateIndex(-1); // swipe down
-    }
+    updateIndex(diff > 0 ? 1 : -1);
   };
 
   const updateIndex = (direction: number) => {
