@@ -204,7 +204,7 @@ return () => {
   </button>
 
   {/* MENU ITEMS */}
-  <nav className="flex flex-col items-start gap-8 px-8 md:items-center md:px-0">
+  <nav className="flex flex-col items-center gap-8 px-8 md:items-center md:px-0">
 
     <Link href="/craft" onClick={() => setMenuOpen(false)}>
       <span className="text-3xl md:text-5xl font-playfair block py-2">
