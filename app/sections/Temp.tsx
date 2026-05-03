@@ -27,12 +27,19 @@ useEffect(() => {
 let startY = 0;
 
 const handleTouchStart = (e: TouchEvent) => {
-  if ((e.target as HTMLElement).closest("header")) return; // ✅ ADD THIS
+  if (
+    (e.target as HTMLElement).closest("header") ||
+    (e.target as HTMLElement).closest("[data-menu]")
+  ) return;
+
   startY = e.touches[0].clientY;
 };
 
 const handleTouchEnd = (e: TouchEvent) => {
-  if ((e.target as HTMLElement).closest("header")) return; // ✅ ADD THIS
+  if (
+    (e.target as HTMLElement).closest("header") ||
+    (e.target as HTMLElement).closest("[data-menu]")
+  ) return;
 
   const endY = e.changedTouches[0].clientY;
   const diff = startY - endY;
@@ -72,7 +79,10 @@ const handleTouchEnd = (e: TouchEvent) => {
 
 
 const handleTouchMove = (e: TouchEvent) => {
-  if ((e.target as HTMLElement).closest("header")) return; // ✅ ADD THIS
+  if (
+    (e.target as HTMLElement).closest("header") ||
+    (e.target as HTMLElement).closest("[data-menu]")
+  ) return;
 
   const section = containerRef.current;
   if (!section) return;
@@ -93,7 +103,7 @@ const handleTouchMove = (e: TouchEvent) => {
     return;
   }
 
-  e.preventDefault(); // only blocks slider, not header
+  e.preventDefault(); // now safe
 };
 
   const handleWheel = (e: WheelEvent) => {
@@ -177,6 +187,7 @@ return () => {
 </header>
 
 <div
+  data-menu
   className={`fixed inset-0 z-[200] flex flex-col justify-center text-white 
   transition-all duration-500 ease-in-out
   ${menuOpen 
