@@ -27,10 +27,13 @@ useEffect(() => {
 let startY = 0;
 
 const handleTouchStart = (e: TouchEvent) => {
+  if ((e.target as HTMLElement).closest("header")) return; // ✅ ADD THIS
   startY = e.touches[0].clientY;
 };
 
 const handleTouchEnd = (e: TouchEvent) => {
+  if ((e.target as HTMLElement).closest("header")) return; // ✅ ADD THIS
+
   const endY = e.changedTouches[0].clientY;
   const diff = startY - endY;
 
@@ -42,7 +45,9 @@ const handleTouchEnd = (e: TouchEvent) => {
     rect.top <= 0 && rect.bottom >= window.innerHeight;
 
   if (!inView) return;
+
   e.preventDefault();
+
   if (isScrolling.current) return;
 
   const isLast = activeIndex === imageList.length - 1;
@@ -67,6 +72,8 @@ const handleTouchEnd = (e: TouchEvent) => {
 
 
 const handleTouchMove = (e: TouchEvent) => {
+  if ((e.target as HTMLElement).closest("header")) return; // ✅ ADD THIS
+
   const section = containerRef.current;
   if (!section) return;
 
@@ -82,13 +89,11 @@ const handleTouchMove = (e: TouchEvent) => {
   const currentY = e.touches[0].clientY;
   const diff = startY - currentY;
 
-  // 👉 Allow normal scroll at edges
   if ((isLast && diff > 0) || (isFirst && diff < 0)) {
-    return; // 🔥 DO NOT prevent scroll
+    return;
   }
 
-  // 👉 Otherwise lock scroll
-  e.preventDefault();
+  e.preventDefault(); // only blocks slider, not header
 };
 
   const handleWheel = (e: WheelEvent) => {
