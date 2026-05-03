@@ -153,11 +153,11 @@ return () => {
       className="h-screen relative overflow-hidden"
     >
 
- <header className="absolute top-0 left-0 w-full z-40 flex items-center px-6 md:px-12 py-4">
+ <header className="absolute top-0 left-0 w-full z-[100] flex items-center px-6 md:px-12 py-4 pointer-events-none">
 
   <div
     onClick={() => setMenuOpen(!menuOpen)}
-    className="flex items-center gap-3 cursor-pointer"
+    className="flex items-center gap-3 cursor-pointer pointer-events-auto touch-manipulation"
   >
     <div className="flex flex-col gap-1">
       <span className="w-5 h-[1px] bg-white block"></span>
@@ -172,7 +172,7 @@ return () => {
 </header>
 
 <div
-  className={`fixed inset-0 z-50 flex flex-col justify-center text-white 
+  className={`fixed inset-0 z-[200] flex flex-col justify-center text-white 
   transition-all duration-500 ease-in-out
   ${menuOpen 
     ? "opacity-100 translate-y-0 bg-black" 
