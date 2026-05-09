@@ -13,18 +13,36 @@ export default function Highlights() {
     { label: "THE RESULTS", text: "Natural. Balanced. Authentic." }
   ];
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+ useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".highlight-item", {
-      scrollTrigger: ".highlight-item",
+  const items = gsap.utils.toArray(".highlight-item");
+
+  items.forEach((item: any) => {
+
+    gsap.set(item, {
+      opacity: 1,
+      y: 0,
+    });
+
+    gsap.from(item, {
       opacity: 0,
       y: 80,
       duration: 1,
-      stagger: 0.2,
-      ease: "power3.out"
+      ease: "power3.out",
+
+      scrollTrigger: {
+        trigger: item,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
     });
-  }, []);
+
+  });
+
+  ScrollTrigger.refresh();
+
+}, []);
 
   return (
     <section>

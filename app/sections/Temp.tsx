@@ -5,6 +5,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Header from "./Header";
 
 export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -168,71 +169,10 @@ return () => {
       className="h-screen relative overflow-hidden"
     >
 
- <header className="absolute top-0 left-0 w-full z-[100] flex items-center px-6 md:px-12 py-4 pointer-events-none">
-
-  <div
-    onClick={() => setMenuOpen(!menuOpen)}
-    className="flex items-center gap-3 cursor-pointer pointer-events-auto touch-manipulation"
-  >
-    <div className="flex flex-col gap-1">
-      <span className="w-5 h-[1px] bg-white block"></span>
-      <span className="w-5 h-[1px] bg-white block"></span>
-    </div>
-
-    <span className="text-sm tracking-widest font-manrope text-white">
-      MENU
-    </span>
-  </div>
-
-</header>
-
-<div
-  data-menu
-  className={`fixed inset-0 z-[200] flex flex-col justify-center text-white 
-  transition-all duration-500 ease-in-out
-  ${menuOpen 
-    ? "opacity-100 translate-y-0 bg-black" 
-    : "opacity-0 -translate-y-5 pointer-events-none"}`}
->
-
-  {/* CLOSE BUTTON */}
-  <button
-    onClick={() => setMenuOpen(false)}
-    className="absolute top-5 left-5 text-xs tracking-widest font-manrope"
-  >
-    CLOSE
-  </button>
-
-  {/* MENU ITEMS */}
-  <nav className="flex flex-col items-center gap-8 px-8 md:items-center md:px-0">
-
-    <Link href="/craft" onClick={() => setMenuOpen(false)}>
-      <span className="text-3xl md:text-5xl font-playfair block py-2">
-        The Craft
-      </span>
-    </Link>
-
-    <Link href="/experience" onClick={() => setMenuOpen(false)}>
-      <span className="text-3xl md:text-5xl font-playfair block py-2">
-        The Experience
-      </span>
-    </Link>
-
-    <Link href="/process" onClick={() => setMenuOpen(false)}>
-      <span className="text-3xl md:text-5xl font-playfair block py-2">
-        The Process
-      </span>
-    </Link>
-
-    <Link href="/results" onClick={() => setMenuOpen(false)}>
-      <span className="text-3xl md:text-5xl font-playfair block py-2">
-        The Results
-      </span>
-    </Link>
-
-  </nav>
-
-</div>
+ <Header
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+        />
       
       {/* 🔥 SLIDE IMAGES */}
       {imageList.map((img, i) => (

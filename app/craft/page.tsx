@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Footer from "../sections/Footer"; // ✅ use your existing footer
+import Header from "../sections/Header";
 
 const images = [
     
@@ -15,6 +17,7 @@ const images = [
 export default function Page() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const activeIndexRef = useRef(0);
   const isScrolling = useRef(false);
@@ -24,6 +27,7 @@ useEffect(() => {
   let touchEndX = 0;
 
   const handleWheel = (e: WheelEvent) => {
+     if (menuOpen) return;
     const section = containerRef.current;
     if (!section) return;
 
@@ -51,6 +55,7 @@ useEffect(() => {
   };
 
   const handleTouchEnd = (e: TouchEvent) => {
+     if (menuOpen) return;
     touchEndX = e.changedTouches[0].clientX;
 
     const diff = touchStartX - touchEndX;
@@ -96,12 +101,19 @@ useEffect(() => {
     window.removeEventListener("touchstart", handleTouchStart);
     window.removeEventListener("touchend", handleTouchEnd);
   };
-}, []);
+}, [menuOpen]);
 
   return (
     <>
+    
       {/* ================= CRAFT SECTION ================= */}
       <section ref={containerRef} className="relative min-h-screen">
+
+
+        <Header
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+        />
         
         <div className="min-h-screen flex flex-col md:flex-row relative">
 
