@@ -31,6 +31,15 @@ export default function Header({
           </span>
         </div>
 
+         {/* CENTER LOGO */}
+    <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
+      <img
+        src="/path2.png"
+        alt="Blanc Logo"
+        className="w-20 md:w-28 opacity-90"
+      />
+    </div>
+
         {/* BACK BUTTON */}
         <Link
           href="/"
