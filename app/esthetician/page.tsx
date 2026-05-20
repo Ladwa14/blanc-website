@@ -150,14 +150,14 @@ export default function Page() {
         {/* MAIN LAYOUT */}
         <div className="min-h-screen flex flex-col md:flex-row relative">
           
-          {/* LOGO */}
+          {/* LOGO 
           <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
             <img
               src="/path2.png"
               className="w-20 md:w-28 opacity-90"
             />
           </div>
-
+*/}
           {/* LEFT IMAGE SECTION */}
           <div className="w-full md:w-1/2 relative overflow-hidden h-[60vh] md:h-screen">
             <div
