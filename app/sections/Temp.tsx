@@ -17,7 +17,8 @@ export default function Hero() {
     "/Smile.webp",
     "/Above_the_fold_3.webp",
     "/Above_the_fold_4.webp",
-    "/Above_the_fold_5.webp"
+    "/Above_the_fold_5.webp",
+    "/Above_the_fold_last_image.webp"
   ];
 
   const isScrolling = useRef(false);
