@@ -9,7 +9,7 @@ const images = [
 
   "/The_Esthetician_1st_image.webp",
   "/The_Esthetician_image_2.webp",
-  "/The_Esthetician_image_3.webp"
+  "/The_Esthetician_image_3 .webp"
 
   // "/Blanc_website_2.webp",
   // "/Smile.webp",
