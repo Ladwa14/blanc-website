@@ -6,10 +6,13 @@ import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 
 const images = [
-  "/Blanc_website_2.webp",
-  "/Smile.webp",
-  "/Above_the_fold_3.webp",
-  "/Above_the_fold_4.webp",
+
+  "/The_Esthetician_1st_image.webp",
+
+  // "/Blanc_website_2.webp",
+  // "/Smile.webp",
+  // "/Above_the_fold_3.webp",
+  // "/Above_the_fold_4.webp",
 ];
 
 export default function Page() {
