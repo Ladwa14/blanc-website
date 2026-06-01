@@ -6,10 +6,11 @@ import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 
 const images = [
-  "/Blanc_website_2.webp",
-  "/Smile.webp",
-  "/Above_the_fold_3.webp",
-  "/Above_the_fold_4.webp",
+  "/The_Experience_image_.webp",
+  // "/Blanc_website_2.webp",
+  // "/Smile.webp",
+  // "/Above_the_fold_3.webp",
+  // "/Above_the_fold_4.webp",
 ];
 
 export default function Page() {
@@ -159,7 +160,7 @@ export default function Page() {
           </div>
 */}
           {/* LEFT IMAGE SECTION */}
-          <div className="w-full md:w-1/2 relative overflow-hidden h-[60vh] md:h-screen">
+          <div className="w-full md:w-1/2 relative overflow-hidden h-[75vh] md:h-screen">
             <div
               className="flex h-full transition-transform duration-500 ease-out"
               style={{
