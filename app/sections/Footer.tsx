@@ -16,7 +16,8 @@ export default function Footer() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1);
 
-  const [selectedTime, setSelectedTime] = useState("02:30pm");
+const [selectedTime, setSelectedTime] = useState("02:30pm");
+const [selectedDate, setSelectedDate] = useState(10);
 
   const times = [
     "10:30am",
@@ -28,6 +29,11 @@ export default function Footer() {
     "05:00pm",
     "05:30pm",
   ];
+
+  const calendarDays = Array.from(
+  { length: 31 },
+  (_, i) => i + 1
+);
 
   return (
     <>
@@ -154,7 +160,7 @@ export default function Footer() {
 
       {open && (
         <div className="fixed inset-0 z-[9999] bg-black/20 backdrop-blur-sm flex items-center justify-center p-4">
-         <div className="bg-white w-full max-w-6xl h-[95vh] relative overflow-y-auto">
+        <div className="bg-white w-full max-w-5xl h-[88vh] relative overflow-y-auto">
             {/* CLOSE */}
             <button
               onClick={() => setOpen(false)}
@@ -163,10 +169,10 @@ export default function Footer() {
               <X size={20} />
             </button>
 
-           <div className="grid grid-cols-1 md:grid-cols-[320px_1fr] min-h-full">
+          <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] min-h-full">
               {/* LEFT PANEL */}
 
-              <div className="border-r border-gray-200 p-10 flex flex-col">
+              <div className="border-r border-gray-200 p-8 flex flex-col">
                 {step === 2 && (
                   <button
                     onClick={() => setStep(1)}
@@ -179,7 +185,7 @@ export default function Footer() {
                 <div className="space-y-10 mt-6">
                   <div className="flex items-center gap-4">
                     <Clock3 size={22} strokeWidth={1.5} />
-                    <span className="font-manrope text-[18px]">
+                    <span className="font-manrope text-[15px]">
                       30 mins
                     </span>
                   </div>
@@ -188,14 +194,14 @@ export default function Footer() {
                     <>
                       <div className="flex items-center gap-4">
                         <Globe size={22} strokeWidth={1.5} />
-                        <span className="font-manrope text-[18px]">
+                        <span className="font-manrope text-[15px]">
                           India Standard Time (IST)
                         </span>
                       </div>
 
                       <div className="flex gap-4">
                         <Calendar size={22} strokeWidth={1.5} />
-                        <div className="font-manrope text-[18px] leading-[1.5]">
+                        <div className="font-manrope text-[15px] leading-[1.5]">
                           <p>02:30pm - 03:00pm, Thursday,</p>
                           <p>August 10th, 2026</p>
                         </div>
@@ -207,12 +213,12 @@ export default function Footer() {
 
               {/* RIGHT PANEL */}
 
-              <div className="p-6 md:p-10">
+              <div className="p-6 md:p-8">
                 {/* STEP 1 */}
 
                 {step === 1 && (
                   <>
-                    <h2 className="font-playfair text-[44px] text-black mb-12">
+                    <h2 className="font-playfair text-[34px] md:text-[38px] text-black mb-10">
                       Select Date and Time
                     </h2>
 
@@ -223,7 +229,7 @@ export default function Footer() {
                         <ChevronLeft size={18} />
                       </button>
 
-                      <p className="font-manrope text-[22px]">
+                      <p className="font-manrope text-[15px]">
                         August 2026
                       </p>
 
@@ -234,64 +240,45 @@ export default function Footer() {
 
                     {/* CALENDAR */}
 
-                    <div className="max-w-[650px]">
-                      <div className="grid grid-cols-7 gap-y-8 text-center mb-8">
-                        {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map(
-                          (day) => (
-                            <p
-                              key={day}
-                              className="font-manrope text-[13px] text-gray-500"
-                            >
-                              {day}
-                            </p>
-                          )
-                        )}
+                    {/* CALENDAR */}
 
-                        {[1, 2, 3, 4, 5, 6].map((n) => (
-                          <p
-                            key={n}
-                            className="text-gray-300 font-manrope"
-                          >
-                            {n}
-                          </p>
-                        ))}
+<div className="max-w-[650px]">
+  <div className="grid grid-cols-7 gap-y-6 text-center mb-8">
 
-                        {[7, 8, 9, 10, 11, 12, 13].map((n) => (
-                          <div key={n} className="flex justify-center">
-                            {n === 10 ? (
-                              <div className="w-14 h-14 rounded-full bg-[#2B2B2B] text-white flex items-center justify-center font-manrope">
-                                {n}
-                              </div>
-                            ) : (
-                              <p className="font-manrope">{n}</p>
-                            )}
-                          </div>
-                        ))}
+    {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((day) => (
+      <p
+        key={day}
+        className="font-manrope text-[11px] text-gray-500"
+      >
+        {day}
+      </p>
+    ))}
 
-                        {[14, 15, 16, 17, 18, 19, 20].map((n) => (
-                          <p key={n} className="font-manrope">
-                            {n}
-                          </p>
-                        ))}
+    {[1, 2, 3, 4, 5, 6].map((n) => (
+      <div key={`empty-${n}`} />
+    ))}
 
-                        {[21, 22, 23, 24, 25, 26, 27].map((n) => (
-                          <p key={n} className="font-manrope">
-                            {n}
-                          </p>
-                        ))}
-
-                        {[28, 29, 30, 31].map((n) => (
-                          <p key={n} className="font-manrope">
-                            {n}
-                          </p>
-                        ))}
-                      </div>
+    {calendarDays.map((day) => (
+      <div key={day} className="flex justify-center">
+        <button
+          onClick={() => setSelectedDate(day)}
+          className={`w-10 h-10 rounded-full font-manrope text-[13px] transition ${
+            selectedDate === day
+              ? "bg-[#2B2B2B] text-white"
+              : "hover:bg-gray-100"
+          }`}
+        >
+          {day}
+        </button>
+      </div>
+    ))}
+  </div>
 
                       {/* TIMES */}
 
                       <div className="border-t border-gray-200 pt-10 mt-10">
                         <h3 className="font-playfair text-[28px] mb-8">
-                          Thursday, 10th August
+                          Thursday, {selectedDate}th August
                         </h3>
 
                         <div className="flex flex-wrap gap-4">
@@ -299,7 +286,7 @@ export default function Footer() {
                             <button
                               key={time}
                               onClick={() => setSelectedTime(time)}
-                              className={`border px-8 py-4 font-manrope text-[15px] transition ${
+                              className={`border px-6 py-3 font-manrope text-[13px] transition ${
                                 selectedTime === time
                                   ? "bg-[#2B2B2B] text-white border-[#2B2B2B]"
                                   : "border-gray-300"
@@ -313,11 +300,11 @@ export default function Footer() {
                         {/* TIMEZONE */}
 
                         <div className="mt-10">
-                          <p className="font-playfair mb-3 text-[18px]">
+                          <p className="font-playfair mb-3 text-[15px]">
                             Timezone<span className="text-red-500">*</span>
                           </p>
 
-                          <select className="w-full max-w-[420px] border border-gray-300 h-[60px] px-5 font-manrope outline-none">
+                          <select className="w-full max-w-[420px] border border-gray-300 h-[52px] px-5 font-manrope outline-none">
                             <option>India Standard Time (IST)</option>
                           </select>
                         </div>
@@ -349,7 +336,7 @@ export default function Footer() {
                       {/* NAME */}
 
                       <div>
-                        <label className="block font-playfair text-[18px] mb-3">
+                        <label className="block font-playfair text-[15px] mb-3">
                           Patient's Name
                           <span className="text-red-500">*</span>
                         </label>
@@ -357,27 +344,27 @@ export default function Footer() {
                         <input
                           type="text"
                           placeholder="Enter patient's name"
-                          className="w-full border border-gray-300 h-[60px] px-5 outline-none font-manrope"
+                          className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
                         />
                       </div>
 
                       {/* PHONE */}
 
                       <div>
-                        <label className="block font-playfair text-[18px] mb-3">
+                        <label className="block font-playfair text-[15px] mb-3">
                           Phone Number
                           <span className="text-red-500">*</span>
                         </label>
 
                         <div className="flex">
-                          <div className="border border-gray-300 border-r-0 h-[60px] px-5 flex items-center font-manrope">
+                          <div className="border border-gray-300 border-r-0 h-[52px] px-5 flex items-center font-manrope">
                             +91
                           </div>
 
                           <input
                             type="text"
                             placeholder="Enter phone number"
-                            className="w-full border border-gray-300 h-[60px] px-5 outline-none font-manrope"
+                            className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
                           />
                         </div>
                       </div>
@@ -385,7 +372,7 @@ export default function Footer() {
                       {/* EMAIL */}
 
                       <div>
-                        <label className="block font-playfair text-[18px] mb-3">
+                        <label className="block font-playfair text-[15px] mb-3">
                           Email Address
                           <span className="text-red-500">*</span>
                         </label>
@@ -393,14 +380,14 @@ export default function Footer() {
                         <input
                           type="email"
                           placeholder="Enter email address"
-                          className="w-full border border-gray-300 h-[60px] px-5 outline-none font-manrope"
+                          className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
                         />
                       </div>
 
                       {/* LOCATION */}
 
                       <div>
-                        <label className="block font-playfair text-[18px] mb-5">
+                        <label className="block font-playfair text-[15px] mb-5">
                           Select Location or Video Consultation
                           <span className="text-red-500">*</span>
                         </label>
@@ -427,21 +414,21 @@ export default function Footer() {
                       {/* MESSAGE */}
 
                       <div>
-                        <label className="block font-playfair text-[18px] mb-4 leading-[1.5]">
+                        <label className="block font-playfair text-[15px] mb-4 leading-[1.5]">
                           Please share anything that will help prepare for our
                           consultation.
                         </label>
 
                         <textarea
                           placeholder="Enter reason for consultation"
-                          className="w-full border border-gray-300 h-[140px] p-5 outline-none resize-none font-manrope"
+                          className="w-full border border-gray-300 h-[110px] p-5 outline-none resize-none font-manrope"
                         />
                       </div>
 
                       {/* SUBMIT */}
 
                       <div className="flex justify-end pt-6">
-                        <button className="bg-[#2B2B2B] text-white px-16 py-5 font-manrope">
+                        <button className="bg-[#2B2B2B] text-white px-12 py-3 text-[14px] font-manrope">
                           Submit
                         </button>
                       </div>
