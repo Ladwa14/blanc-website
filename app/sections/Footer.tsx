@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   X,
   ChevronLeft,
@@ -53,16 +54,48 @@ export default function Footer() {
 
           {/* QUICK LINKS */}
           <div>
-            <p className="font-playfair text-gray-500 mb-4 tracking-wide text-[13px]">
-              QUICK LINKS
-            </p>
-            <ul className="font-manrope text-black space-y-2 text-[13px]">
-              <li>THE ATELIER</li>
-              <li>ARTISANS OF BLANC</li>
-              <li>OUR WORK</li>
-              <li>ESTHETICIANS AT BLANC</li>
-            </ul>
-          </div>
+  <p className="font-playfair text-gray-500 mb-4 tracking-wide text-[13px]">
+    QUICK LINKS
+  </p>
+
+  <ul className="font-manrope text-black space-y-2 text-[13px]">
+    <li>
+      <Link
+        href="/atelier"
+        className="hover:opacity-60 transition-opacity duration-300"
+      >
+        THE ATELIER
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/artisans"
+        className="hover:opacity-60 transition-opacity duration-300"
+      >
+        ARTISANS OF BLANC
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/process"
+        className="hover:opacity-60 transition-opacity duration-300"
+      >
+        OUR PROCESS
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/esthetician"
+        className="hover:opacity-60 transition-opacity duration-300"
+      >
+        ESTHETICIANS AT BLANC
+      </Link>
+    </li>
+  </ul>
+</div>
 
           {/* CONTACT */}
           <div className="space-y-4">
@@ -89,7 +122,7 @@ export default function Footer() {
                 CALL US AT
               </p>
               <p className="font-manrope text-black text-[13px]">
-                +91 8976552346
+                +91 9619666607
               </p>
             </div>
           </div>
