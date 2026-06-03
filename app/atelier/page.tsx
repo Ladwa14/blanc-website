@@ -164,7 +164,7 @@ export default function Page() {
                 connected within a single creative environment.
               </p>
 
-              <h2 className="text-3xl md:text-5xl font-playfair text-center leading-tight mb-8 text-[#2b2b2b]">
+              <h2 className="text-2xl md:text-5xl font-playfair text-center leading-tight mb-8 text-[#2b2b2b]">
                 Where digital precision meets{" "}
                 <span className="italic">handcrafted</span> artistry.
               </h2>
@@ -205,7 +205,7 @@ export default function Page() {
             THE MATERIALITY OF LIGHT
           </p>
 
-          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10 text-center">
+          <h2 className="font-playfair text-2xl md:text-4xl text-[#2b2b2b] leading-tight mb-10 text-center">
             Designed around how light moves through a smile.
           </h2>
 
