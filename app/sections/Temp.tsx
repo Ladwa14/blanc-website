@@ -170,10 +170,11 @@ return () => {
       className="h-screen relative overflow-hidden"
     >
 
- <Header
-          menuOpen={menuOpen}
-          setMenuOpen={setMenuOpen}
-        />
+<Header
+  menuOpen={menuOpen}
+  setMenuOpen={setMenuOpen}
+  showBackButton={false}
+/>
       
       {/* 🔥 SLIDE IMAGES */}
       {imageList.map((img, i) => (
