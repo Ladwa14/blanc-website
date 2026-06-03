@@ -205,11 +205,11 @@ export default function Page() {
             THE MATERIALITY OF LIGHT
           </p>
 
-          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10">
+          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10 text-center">
             Designed around how light moves through a smile.
           </h2>
 
-          <div className="max-w-3xl space-y-6 text-gray-600 leading-relaxed font-manrope">
+          <div className="max-w-3xl space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
             <p>
               At Blanc, material selection begins with how light interacts with
               the smile. We work primarily with high-translucency glass
@@ -236,15 +236,15 @@ export default function Page() {
       {/* PROVENANCE */}
       <section className="bg-[#f7f7f7] py-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs tracking-[0.25em] text-gray-500 mb-4 font-playfair">
+          <p className="text-xs tracking-[0.25em] text-gray-500 mb-4 font-playfair text-center">
             PROVENANCE
           </p>
 
-          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10">
+          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10 text-center">
             Quality begins at the source.
           </h2>
 
-          <div className="max-w-3xl space-y-6 text-gray-600 leading-relaxed font-manrope">
+          <div className="max-w-3xl space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
             <p>
               Our glass ceramics are derived from refined mineral sources
               selected for consistency, purity, and structural integrity.
