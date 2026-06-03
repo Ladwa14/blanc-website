@@ -5,11 +5,13 @@ import Link from "next/link";
 interface HeaderProps {
   menuOpen: boolean;
   setMenuOpen: (value: boolean) => void;
+  showBackButton?: boolean;
 }
 
 export default function Header({
   menuOpen,
   setMenuOpen,
+  showBackButton = true,
 }: HeaderProps) {
   return (
     <>
@@ -41,20 +43,21 @@ export default function Header({
     </div>
 
         {/* BACK BUTTON */}
-        <Link
-          href="/"
-          className="pointer-events-auto"
-        >
-          <div className="flex items-center gap-2 cursor-pointer">
+       {/* BACK BUTTON */}
+{showBackButton && (
+  <Link
+    href="/"
+    className="pointer-events-auto"
+  >
+    <div className="flex items-center gap-2 cursor-pointer">
+      <span className="text-xl text-black">←</span>
 
-            <span className="text-xl text-black">←</span>
-
-            <span className="text-sm tracking-widest font-manrope text-black">
-              BACK
-            </span>
-
-          </div>
-        </Link>
+      <span className="text-sm tracking-widest font-manrope text-black">
+        BACK
+      </span>
+    </div>
+  </Link>
+)}
 
       </header>
 
