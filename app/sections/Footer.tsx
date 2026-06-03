@@ -218,7 +218,7 @@ const [selectedDate, setSelectedDate] = useState(10);
 
                 {step === 1 && (
                   <>
-                    <h2 className="font-playfair text-[34px] md:text-[38px] text-black mb-10">
+                    <h2 className="font-playfair text-[30px] md:text-[30px] text-black mb-10">
                       Select Date and Time
                     </h2>
 
@@ -243,7 +243,7 @@ const [selectedDate, setSelectedDate] = useState(10);
                     {/* CALENDAR */}
 
 <div className="max-w-[650px]">
-  <div className="grid grid-cols-7 gap-y-6 text-center mb-8">
+  <div className="grid grid-cols-7 gap-y-4 text-center mb-8">
 
     {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((day) => (
       <p
@@ -328,7 +328,7 @@ const [selectedDate, setSelectedDate] = useState(10);
 
                 {step === 2 && (
                   <>
-                    <h2 className="font-playfair text-[44px] text-black mb-12">
+                    <h2 className="font-playfair text-[30px] text-black mb-12">
                       Enter Details
                     </h2>
 
@@ -394,8 +394,8 @@ const [selectedDate, setSelectedDate] = useState(10);
 
                         <div className="grid grid-cols-2 gap-y-6">
                           {[
-                            "Bandra",
-                            "Prabhadevi",
+                            // "Bandra",
+                            // "Prabhadevi",
                             "Juhu",
                             "Google Meet",
                           ].map((item) => (
@@ -415,12 +415,11 @@ const [selectedDate, setSelectedDate] = useState(10);
 
                       <div>
                         <label className="block font-playfair text-[15px] mb-4 leading-[1.5]">
-                          Please share anything that will help prepare for our
-                          consultation.
+                          Tell us what you’d like to improve about your smile.
                         </label>
 
                         <textarea
-                          placeholder="Enter reason for consultation"
+                          placeholder=""
                           className="w-full border border-gray-300 h-[110px] p-5 outline-none resize-none font-manrope"
                         />
                       </div>
