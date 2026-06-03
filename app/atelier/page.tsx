@@ -210,21 +210,21 @@ export default function Page() {
           </h2>
 
           <div className="max-w-3xl mx-auto space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
-            <p>
+            <p className="text-sm">
               At Blanc, material selection begins with how light interacts with
               the smile. We work primarily with high-translucency glass
               ceramics chosen for their ability to reflect depth, softness, and
               natural enamel characteristics.
             </p>
 
-            <p>
+            <p className="text-sm">
               Unlike conventional ceramics, these materials allow light to pass
               through and diffuse gently, helping restorations blend seamlessly
               with surrounding teeth rather than appearing opaque or
               surface-bound.
             </p>
 
-            <p>
+            <p className="text-sm">
               Each ceramic is processed through controlled heat and pressure to
               achieve strength without unnecessary bulk, allowing restorations
               to remain refined while maintaining durability over time.
@@ -240,28 +240,28 @@ export default function Page() {
             PROVENANCE
           </p>
 
-          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10 text-center">
+          <h2 className="font-playfair text-3xl md:text-4xl text-[#2b2b2b] leading-tight mb-10 text-center">
             Quality begins at the source.
           </h2>
 
           <div className="max-w-3xl mx-auto space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
-            <p>
+            <p className="text-sm">
               Our glass ceramics are derived from refined mineral sources
               selected for consistency, purity, and structural integrity.
             </p>
 
-            <p>
+            <p className="text-sm">
               These raw materials form the foundation of every restoration,
               providing clarity and predictability throughout fabrication.
             </p>
 
-            <p>
+            <p className="text-sm">
               By working with carefully sourced ceramic systems and maintaining
               strict material standards, Blanc ensures reliability at every
               stage—from digital design to final placement.
             </p>
 
-            <p>
+            <p className="text-sm">
               For us, quality begins at the source and carries through the
               entire process.
             </p>
