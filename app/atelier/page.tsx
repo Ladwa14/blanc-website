@@ -209,7 +209,7 @@ export default function Page() {
             Designed around how light moves through a smile.
           </h2>
 
-          <div className="max-w-3xl space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
+          <div className="max-w-3xl mx-auto space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
             <p>
               At Blanc, material selection begins with how light interacts with
               the smile. We work primarily with high-translucency glass
@@ -244,7 +244,7 @@ export default function Page() {
             Quality begins at the source.
           </h2>
 
-          <div className="max-w-3xl space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
+          <div className="max-w-3xl mx-auto space-y-6 text-gray-600 leading-relaxed font-manrope text-center">
             <p>
               Our glass ceramics are derived from refined mineral sources
               selected for consistency, purity, and structural integrity.
