@@ -16,8 +16,29 @@ export default function Footer() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1);
 
+const today = new Date();
+
+const [currentMonth, setCurrentMonth] = useState(today.getMonth());
+const [currentYear, setCurrentYear] = useState(today.getFullYear());
+
+const [selectedDate, setSelectedDate] = useState(today.getDate());
 const [selectedTime, setSelectedTime] = useState("02:30pm");
-const [selectedDate, setSelectedDate] = useState(10);
+
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
   const times = [
     "10:30am",
@@ -30,10 +51,44 @@ const [selectedDate, setSelectedDate] = useState(10);
     "05:30pm",
   ];
 
-  const calendarDays = Array.from(
-  { length: 31 },
+const daysInMonth = new Date(
+  currentYear,
+  currentMonth + 1,
+  0
+).getDate();
+
+const firstDay = new Date(
+  currentYear,
+  currentMonth,
+  1
+).getDay();
+
+const startOffset = firstDay === 0 ? 6 : firstDay - 1;
+
+const calendarDays = Array.from(
+  { length: daysInMonth },
   (_, i) => i + 1
 );
+
+
+
+const prevMonth = () => {
+  if (currentMonth === 0) {
+    setCurrentMonth(11);
+    setCurrentYear((prev) => prev - 1);
+  } else {
+    setCurrentMonth((prev) => prev - 1);
+  }
+};
+
+const nextMonth = () => {
+  if (currentMonth === 11) {
+    setCurrentMonth(0);
+    setCurrentYear((prev) => prev + 1);
+  } else {
+    setCurrentMonth((prev) => prev + 1);
+  }
+};
 
   return (
     <>
@@ -202,8 +257,22 @@ const [selectedDate, setSelectedDate] = useState(10);
                       <div className="flex gap-4">
                         <Calendar size={22} strokeWidth={1.5} />
                         <div className="font-manrope text-[15px] leading-[1.5]">
-                          <p>02:30pm - 03:00pm, Thursday,</p>
-                          <p>August 10th, 2026</p>
+                        <p>
+  {selectedTime} - 30 mins
+</p>
+
+<p>
+  {new Date(
+    currentYear,
+    currentMonth,
+    selectedDate
+  ).toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })}
+</p>
                         </div>
                       </div>
                     </>
@@ -225,15 +294,15 @@ const [selectedDate, setSelectedDate] = useState(10);
                     {/* MONTH */}
 
                     <div className="flex items-center justify-between max-w-[600px] mb-10">
-                      <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center">
+                      <button onClick={prevMonth} className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center" >
                         <ChevronLeft size={18} />
                       </button>
 
-                      <p className="font-manrope text-[15px]">
-                        August 2026
-                      </p>
+                    <p className="font-manrope text-[15px]">
+  {months[currentMonth]} {currentYear}
+</p>
 
-                      <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center">
+                     <button onClick={nextMonth} className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center" >
                         <ChevronRight size={18} />
                       </button>
                     </div>
@@ -254,9 +323,9 @@ const [selectedDate, setSelectedDate] = useState(10);
       </p>
     ))}
 
-    {[1, 2, 3, 4, 5, 6].map((n) => (
-      <div key={`empty-${n}`} />
-    ))}
+   {Array.from({ length: startOffset }).map((_, i) => (
+  <div key={`empty-${i}`} />
+))}
 
     {calendarDays.map((day) => (
       <div key={day} className="flex justify-center">
@@ -277,9 +346,17 @@ const [selectedDate, setSelectedDate] = useState(10);
                       {/* TIMES */}
 
                       <div className="border-t border-gray-200 pt-10 mt-10">
-                        <h3 className="font-playfair text-[28px] mb-8">
-                          Thursday, {selectedDate}th August
-                        </h3>
+                       <h3 className="font-playfair text-[28px] mb-8">
+  {new Date(
+    currentYear,
+    currentMonth,
+    selectedDate
+  ).toLocaleDateString("en-US", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  })}
+</h3>
 
                         <div className="flex flex-wrap gap-4">
                           {times.map((time) => (
