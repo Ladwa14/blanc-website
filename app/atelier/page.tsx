@@ -205,7 +205,7 @@ export default function Page() {
             THE MATERIALITY OF LIGHT
           </p>
 
-          <h2 className="font-playfair text-4xl md:text-6xl text-[#2b2b2b] leading-tight mb-10">
+          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10">
             Designed around how light moves through a smile.
           </h2>
 
@@ -240,7 +240,7 @@ export default function Page() {
             PROVENANCE
           </p>
 
-          <h2 className="font-playfair text-4xl md:text-6xl text-[#2b2b2b] leading-tight mb-10">
+          <h2 className="font-playfair text-4xl md:text-4xl text-[#2b2b2b] leading-tight mb-10">
             Quality begins at the source.
           </h2>
 
