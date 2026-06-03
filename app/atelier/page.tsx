@@ -199,7 +199,7 @@ export default function Page() {
       </section>
 
       {/* MATERIALITY OF LIGHT */}
-      <section className="bg-white py-24 px-6 md:px-8">
+      <section className="bg-white py-12 px-6 md:px-8">
         <div className="max-w-5xl mx-auto">
           <p className="text-xs tracking-[0.25em] text-gray-500 mb-4 font-playfair text-center">
             THE MATERIALITY OF LIGHT
@@ -234,7 +234,7 @@ export default function Page() {
       </section>
 
       {/* PROVENANCE */}
-      <section className="bg-[#f7f7f7] py-24 px-6 md:px-8">
+      <section className="bg-[#f7f7f7] py-12 px-6 md:px-8">
         <div className="max-w-5xl mx-auto">
           <p className="text-xs tracking-[0.25em] text-gray-500 mb-4 font-playfair text-center">
             PROVENANCE
