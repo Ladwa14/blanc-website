@@ -201,7 +201,7 @@ export default function Page() {
       {/* MATERIALITY OF LIGHT */}
       <section className="bg-white py-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs tracking-[0.25em] text-gray-500 mb-4 font-playfair">
+          <p className="text-xs tracking-[0.25em] text-gray-500 mb-4 font-playfair text-center">
             THE MATERIALITY OF LIGHT
           </p>
 
