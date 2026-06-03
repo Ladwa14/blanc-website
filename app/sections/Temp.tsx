@@ -207,7 +207,7 @@ return () => {
   />
 </div>
 
-      {/* 🔥 RIGHT INDICATOR */}
+      {/* 🔥 RIGHT INDICATOR 
       <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 z-40">
         {imageList.map((_, i) => (
           <div key={i}>
@@ -219,6 +219,10 @@ return () => {
           </div>
         ))}
       </div>
+
+*/}
+
+
     </section>
   );
 }
