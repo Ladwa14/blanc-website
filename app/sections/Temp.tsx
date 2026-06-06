@@ -6,6 +6,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Header from "./Header";
+import Head from "next/head";
 
 export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -165,6 +166,23 @@ return () => {
 }, [activeIndex]);
 
   return (
+
+     <>
+    <Head>
+      <title>Blanc | Cosmetic Dentistry & Smile Design in Mumbai</title>
+
+      <meta
+        name="description"
+        content="Blanc offers personalized cosmetic dentistry, smile design, veneers, and aesthetic dental treatments in Mumbai."
+      />
+
+      <meta
+        name="keywords"
+        content="Cosmetic Dentistry Mumbai, Smile Design Mumbai, Veneers Mumbai, Dental Clinic Mumbai, Aesthetic Dentistry"
+      />
+    </Head>
+
+
     <section
       ref={containerRef}
       className="h-screen relative overflow-hidden"
@@ -225,5 +243,6 @@ return () => {
 
 
     </section>
+     </>
   );
 }
