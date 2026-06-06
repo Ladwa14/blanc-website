@@ -317,7 +317,7 @@ export default function FaqClient() {
         setMenuOpen={setMenuOpen}
       />
 
-      <section className="bg-[#f5f2ec] min-h-screen pt-32 pb-24">
+      <section className="bg-[#efefef] min-h-screen pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 md:px-10">
 
           <p className="font-playfair text-[13px] tracking-[0.25em] text-center text-gray-500 mb-4">
