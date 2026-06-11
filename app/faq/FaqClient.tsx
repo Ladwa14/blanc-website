@@ -389,7 +389,7 @@ export default function FaqClient() {
       </section>
 
 
-<div className="max-w-4xl mx-auto px-6 md:px-20 py-20 border-t border-gray-300">
+<div className="max-w-5xl px-6 md:px-0 py-10 border-t border-gray-300">
   <div className="grid md:grid-cols-2 gap-10">
 
     <p className="font-playfair text-xl italic text-gray-500 leading-relaxed">
