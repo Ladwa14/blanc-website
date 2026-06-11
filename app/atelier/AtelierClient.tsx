@@ -155,7 +155,7 @@ export default function Page() {
             </h1>
 
             <div className="max-w-xl relative z-10 text-center md:text-left">
-              <p className="text-xs tracking-[0.25em] text-center text-gray-500 mb-4 font-playfair">
+              <p className="text-[15px] tracking-[0.25em] text-center text-gray-500 mb-4 font-playfair">
                 THE ATELIER
               </p>
 

@@ -165,7 +165,7 @@ useEffect(() => {
 
             <div className="max-w-lg relative z-10 text-center md:text-left px-0 md:px-0">
 
-              <p className="text-xs tracking-[0.25em] text-center text-gray-500 mb-4 font-playfair">
+              <p className="text-[15px] tracking-[0.25em] text-center text-gray-500 mb-4 font-playfair">
                 THE CRAFT
               </p>
 
