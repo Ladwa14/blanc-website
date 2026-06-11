@@ -16,55 +16,45 @@ export default function Header({
   return (
     <>
       {/* HEADER */}
-   <header className="fixed top-0 left-0 w-full z-[100] flex items-center px-6 md:px-12 py-4 pointer-events-none">
+   <header className="fixed top-0 left-0 w-full z-[100] flex items-center justify-between px-6 md:px-12 py-4 pointer-events-none">
 
+  {/* BACK BUTTON */}
+  {showBackButton && (
+    <Link href="/" className="pointer-events-auto">
+      <div className="flex items-center gap-2 cursor-pointer">
+        <span className="text-xl text-black">←</span>
+        <span className="text-sm tracking-widest font-manrope text-black">
+          BACK
+        </span>
+      </div>
+    </Link>
+  )}
 
+  {/* CENTER LOGO */}
+  <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
+    <img
+      src="/path2.png"
+      alt="Blanc Logo"
+      className="w-20 md:w-28 opacity-90"
+    />
+  </div>
 
-{showBackButton && (
-  <Link
-    href="/"
-    className="pointer-events-auto"
+  {/* MENU BUTTON */}
+  <div
+    onClick={() => setMenuOpen(!menuOpen)}
+    className="flex items-center gap-3 cursor-pointer pointer-events-auto touch-manipulation"
   >
-    <div className="flex items-center gap-2 cursor-pointer">
-      <span className="text-xl text-black">←</span>
-
-      <span className="text-sm tracking-widest font-manrope text-black">
-        BACK
-      </span>
-    </div>
-  </Link>
-)}
-
-
-        {/* MENU BUTTON */}
-       
-
-         {/* CENTER LOGO */}
-    <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
-      <img
-        src="/path2.png"
-        alt="Blanc Logo"
-        className="w-20 md:w-28 opacity-90"
-      />
+    <div className="flex flex-col gap-1">
+      <span className="w-5 h-[1px] bg-black block"></span>
+      <span className="w-5 h-[1px] bg-black block"></span>
     </div>
 
-        {/* BACK BUTTON */}
-       {/* BACK BUTTON */}
- <div
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="flex items-center gap-3 cursor-pointer pointer-events-auto touch-manipulation"
-        >
-          <div className="flex flex-col gap-1">
-            <span className="w-5 h-[1px] bg-black block"></span>
-            <span className="w-5 h-[1px] bg-black block"></span>
-          </div>
+    <span className="text-sm tracking-widest font-manrope text-black">
+      MENU
+    </span>
+  </div>
 
-          <span className="text-sm tracking-widest font-manrope text-black">
-            MENU
-          </span>
-        </div>
-
-      </header>
+</header>
 
       {/* FULLSCREEN MENU */}
       <div
