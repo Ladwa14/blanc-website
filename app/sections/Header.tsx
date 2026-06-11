@@ -71,7 +71,7 @@ export default function Header({
         {/* CLOSE BUTTON */}
         <button
           onClick={() => setMenuOpen(false)}
-          className="absolute top-5 left-5 text-xs tracking-widest font-manrope"
+          className="absolute top-5 right-5 text-xs tracking-widest font-manrope"
         >
           CLOSE
         </button>
