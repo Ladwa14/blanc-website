@@ -33,13 +33,13 @@ export default function Header({
 </div>
 
   {/* CENTER LOGO */}
-  <div className="absolute left-1/2 -translate-x-1/2 pointer-events-auto touch-manipulation">
-    <img
-      src="/path2.png"
-      alt="Blanc Logo"
-      className="w-20 md:w-28 opacity-90"
-    />
-  </div>
+  <div className="absolute left-1/2 -translate-x-1/2 pointer-events-auto touch-manipulation cursor-pointer">
+  <img
+    src="/path2.png"
+    alt="Blanc Logo"
+    className="w-20 md:w-28 opacity-90"
+  />
+</div>
 
   {/* MENU BUTTON */}
   <div
