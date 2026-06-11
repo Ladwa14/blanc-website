@@ -390,31 +390,25 @@ export default function FaqClient() {
 
 
 <div className="max-w-4xl mx-auto px-6 md:px-10 py-20 border-t border-gray-300">
-  <div className="grid md:grid-cols-2 gap-10">
-
-    <p className="font-playfair text-xl italic text-gray-500 leading-relaxed">
-    
+  <div className="flex justify-end">
+  <div className="text-right">
+    <p className="font-manrope text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-3">
+      Get In Touch
     </p>
 
-    <div className="md:text-right">
-      <p className="font-manrope text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-3">
-        Get In Touch
-      </p>
+    <p className="font-manrope text-sm text-gray-600">
+      @blanc.studio
+    </p>
 
-      <p className="font-manrope text-sm text-gray-600">
-        @blanc.studio
-      </p>
+    <p className="font-manrope text-sm text-gray-600">
+      Juhu, Mumbai
+    </p>
 
-      <p className="font-manrope text-sm text-gray-600">
-        Juhu, Mumbai
-      </p>
-
-      <p className="font-manrope text-sm text-gray-600">
-        By Appointment Only
-      </p>
-    </div>
-
+    <p className="font-manrope text-sm text-gray-600">
+      By Appointment Only
+    </p>
   </div>
+</div>
 </div>
 
 
