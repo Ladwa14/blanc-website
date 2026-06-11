@@ -33,7 +33,7 @@ export default function Header({
 </div>
 
   {/* CENTER LOGO */}
-  <div className="absolute left-1/2 -translate-x-1/2 pointer-events-auto">
+  <div className="absolute left-1/2 -translate-x-1/2 pointer-events-auto touch-manipulation">
     <img
       src="/path2.png"
       alt="Blanc Logo"
