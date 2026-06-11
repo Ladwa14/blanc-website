@@ -33,7 +33,7 @@ export default function Header({
 </div>
 
   {/* CENTER LOGO */}
-  <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
+  <div className="absolute left-1/2 -translate-x-1/2 pointer-events-auto">
     <img
       src="/path2.png"
       alt="Blanc Logo"
@@ -71,7 +71,7 @@ export default function Header({
         {/* CLOSE BUTTON */}
         <button
           onClick={() => setMenuOpen(false)}
-          className="absolute top-5 right-5 text-xs tracking-widest font-manrope"
+          className="absolute top-5 right-10 text-xs tracking-widest font-manrope"
         >
           CLOSE
         </button>
