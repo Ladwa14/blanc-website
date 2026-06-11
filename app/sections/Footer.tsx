@@ -165,7 +165,7 @@ const nextMonth = () => {
                 VISIT US AT
               </p>
               <p className="font-manrope text-black text-[13px]">
-                16th Road, Bandra West, Mumbai
+                Juhu, Mumbai
               </p>
             </div>
 

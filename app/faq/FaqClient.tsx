@@ -393,9 +393,7 @@ export default function FaqClient() {
   <div className="grid md:grid-cols-2 gap-10">
 
     <p className="font-playfair text-xl italic text-gray-500 leading-relaxed">
-      If a question hasn't been answered here,
-      it will be answered at the consultation.
-      That is what the consultation is for.
+    
     </p>
 
     <div className="md:text-right">
