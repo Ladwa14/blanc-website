@@ -19,6 +19,7 @@ export default function Header({
    <header className="fixed top-0 left-0 w-full z-[100] flex items-center justify-between px-6 md:px-12 py-4 pointer-events-none">
 
   {/* BACK BUTTON */}
+  <div className="w-20 md:w-24">
   {showBackButton && (
     <Link href="/" className="pointer-events-auto">
       <div className="flex items-center gap-2 cursor-pointer">
@@ -29,6 +30,7 @@ export default function Header({
       </div>
     </Link>
   )}
+</div>
 
   {/* CENTER LOGO */}
   <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
