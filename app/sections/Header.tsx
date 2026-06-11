@@ -16,7 +16,7 @@ export default function Header({
   return (
     <>
       {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full z-[100] flex items-center justify-between px-6 md:px-12 py-4 pointer-events-none">
+      <header className="fixed top-0 left-0 w-full z-[100] flex items-center px-6 md:px-12 py-4 pointer-events-none">
 
 
 
