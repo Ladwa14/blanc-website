@@ -18,32 +18,8 @@ export default function Header({
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-[100] flex items-center justify-between px-6 md:px-12 py-4 pointer-events-none">
 
-        {/* MENU BUTTON */}
-        <div
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="flex items-center gap-3 cursor-pointer pointer-events-auto touch-manipulation"
-        >
-          <div className="flex flex-col gap-1">
-            <span className="w-5 h-[1px] bg-black block"></span>
-            <span className="w-5 h-[1px] bg-black block"></span>
-          </div>
 
-          <span className="text-sm tracking-widest font-manrope text-black">
-            MENU
-          </span>
-        </div>
 
-         {/* CENTER LOGO */}
-    <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
-      <img
-        src="/path2.png"
-        alt="Blanc Logo"
-        className="w-20 md:w-28 opacity-90"
-      />
-    </div>
-
-        {/* BACK BUTTON */}
-       {/* BACK BUTTON */}
 {showBackButton && (
   <Link
     href="/"
@@ -58,6 +34,35 @@ export default function Header({
     </div>
   </Link>
 )}
+
+
+        {/* MENU BUTTON */}
+       
+
+         {/* CENTER LOGO */}
+    <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
+      <img
+        src="/path2.png"
+        alt="Blanc Logo"
+        className="w-20 md:w-28 opacity-90"
+      />
+    </div>
+
+        {/* BACK BUTTON */}
+       {/* BACK BUTTON */}
+ <div
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="flex items-center gap-3 cursor-pointer pointer-events-auto touch-manipulation"
+        >
+          <div className="flex flex-col gap-1">
+            <span className="w-5 h-[1px] bg-black block"></span>
+            <span className="w-5 h-[1px] bg-black block"></span>
+          </div>
+
+          <span className="text-sm tracking-widest font-manrope text-black">
+            MENU
+          </span>
+        </div>
 
       </header>
 
