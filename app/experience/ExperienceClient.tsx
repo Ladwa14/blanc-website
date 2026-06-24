@@ -6,7 +6,9 @@ import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 
 const images = [
+  "/The_experience_image_1.webp",
   "/The_Experience_image_.webp",
+  "/Experience_section_image.webp"
   // "/Blanc_website_2.webp",
   // "/Smile.webp",
   // "/Above_the_fold_3.webp",
