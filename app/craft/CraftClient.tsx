@@ -8,7 +8,10 @@ import Header from "../sections/Header";
 const images = [
     
   "/The_Craft_image1.webp",
-  "/The_Craft_image_2_desktop_.webp"
+  "/The_Craft_image_2_desktop_.webp",
+  "/Craft_section_image_3.webp",
+  "/Craft_image_4.webp",
+  "/Craft_image_5.webp"
   // "/Blanc_website_2.webp",
   // "/Smile.webp",
   // "/Above_the_fold_3.webp",
