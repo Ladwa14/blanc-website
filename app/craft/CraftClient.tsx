@@ -160,7 +160,7 @@ useEffect(() => {
             
             {/* WATERMARK */}
             <h1 className="absolute inset-0 flex items-center text-center justify-center text-[80px] md:text-[80px] font-playfair text-black/7 pointer-events-none select-none-translate-y-12 md:-translate-y-7">
-              THE <br></br> CRAFT
+              THE <br></br> CRAF
             </h1>
 
             <div className="max-w-lg relative z-10 text-center md:text-left px-0 md:px-0">
