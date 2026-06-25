@@ -25,6 +25,15 @@ const [selectedDate, setSelectedDate] = useState(today.getDate());
 const [selectedTime, setSelectedTime] = useState("02:30pm");
 
 
+const [name, setName] = useState("");
+const [phone, setPhone] = useState("");
+const [email, setEmail] = useState("");
+const [location, setLocation] = useState("Juhu");
+const [message, setMessage] = useState("");
+
+const [loading, setLoading] = useState(false);
+
+
 const months = [
   "January",
   "February",
@@ -89,6 +98,63 @@ const nextMonth = () => {
     setCurrentMonth((prev) => prev + 1);
   }
 };
+
+
+
+
+const handleSubmit = async () => {
+  // Basic validation
+  if (!name || !phone || !email) {
+    alert("Please fill all required fields.");
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    const response = await fetch("/api/booking", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        phone,
+        email,
+        location,
+        message,
+        date: `${selectedDate} ${months[currentMonth]} ${currentYear}`,
+        time: selectedTime,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Your consultation request has been submitted successfully.");
+
+      // Reset form
+      setName("");
+      setPhone("");
+      setEmail("");
+      setLocation("Juhu");
+      setMessage("");
+
+      // Reset modal
+      setStep(1);
+      setOpen(false);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong.");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
 
   return (
     <>
@@ -419,10 +485,12 @@ const nextMonth = () => {
                         </label>
 
                         <input
-                          type="text"
-                          placeholder="Enter patient's name"
-                          className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
-                        />
+  type="text"
+  placeholder="Enter patient's name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
+/>
                       </div>
 
                       {/* PHONE */}
@@ -439,10 +507,12 @@ const nextMonth = () => {
                           </div>
 
                           <input
-                            type="text"
-                            placeholder="Enter phone number"
-                            className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
-                          />
+  type="tel"
+  placeholder="Enter phone number"
+  value={phone}
+  onChange={(e) => setPhone(e.target.value)}
+  className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
+/>
                         </div>
                       </div>
 
@@ -454,11 +524,13 @@ const nextMonth = () => {
                           <span className="text-red-500">*</span>
                         </label>
 
-                        <input
-                          type="email"
-                          placeholder="Enter email address"
-                          className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
-                        />
+                       <input
+  type="email"
+  placeholder="Enter email address"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
+/>
                       </div>
 
                       {/* LOCATION */}
@@ -480,7 +552,12 @@ const nextMonth = () => {
                               key={item}
                               className="flex items-center gap-3 font-manrope"
                             >
-                              <input type="radio" name="location" />
+                           <input
+  type="radio"
+  name="location"
+  checked={location === item}
+  onChange={() => setLocation(item)}
+/>
                               <MapPin size={18} />
                               {item}
                             </label>
@@ -495,18 +572,23 @@ const nextMonth = () => {
                           Tell us what you’d like to improve about your smile.
                         </label>
 
-                        <textarea
-                          placeholder=""
-                          className="w-full border border-gray-300 h-[110px] p-5 outline-none resize-none font-manrope"
-                        />
+                       <textarea
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  className="w-full border border-gray-300 h-[110px] p-5 outline-none resize-none font-manrope"
+/>
                       </div>
 
                       {/* SUBMIT */}
 
                       <div className="flex justify-end pt-6">
-                        <button className="bg-[#2B2B2B] text-white px-12 py-3 text-[14px] font-manrope">
-                          Submit
-                        </button>
+                       <button
+  onClick={handleSubmit}
+  disabled={loading}
+  className="bg-[#2B2B2B] text-white px-12 py-3 text-[14px] font-manrope disabled:opacity-50"
+>
+  {loading ? "Submitting..." : "Submit"}
+</button>
                       </div>
                     </div>
                   </>
