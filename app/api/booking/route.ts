@@ -7,11 +7,9 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    console.log("RESEND_API_KEY exists:", !!process.env.RESEND_API_KEY);
-
     const result = await resend.emails.send({
       from: "Blanc Esthetics <noreply@blancesthetics.com>",
-      to: ["denthealclinics@gmail.com"], // <-- TEMPORARY
+      to: ["denthealclinics@gmail.com"], // Temporary
       subject: "New Consultation Booking",
       html: `
         <h2>New Consultation Booking</h2>
@@ -21,24 +19,34 @@ export async function POST(req: Request) {
         <p><strong>Location:</strong> ${body.location}</p>
         <p><strong>Date:</strong> ${body.date}</p>
         <p><strong>Time:</strong> ${body.time}</p>
-        <p><strong>Message:</strong></p>
-        <p>${body.message}</p>
+        <p><strong>Message:</strong> ${body.message}</p>
       `,
     });
 
-    console.log("Resend Result:", result);
+    if (result.error) {
+      console.error("RESEND ERROR:");
+      console.error(JSON.stringify(result.error, null, 2));
+
+      return NextResponse.json(
+        {
+          success: false,
+          error: result.error,
+        },
+        { status: 500 }
+      );
+    }
+
+    console.log("EMAIL SENT:", result.data);
 
     return NextResponse.json({
       success: true,
-      result,
     });
-  } catch (error) {
-    console.error("RESEND ERROR:", error);
+  } catch (err) {
+    console.error("CATCH ERROR:", err);
 
     return NextResponse.json(
       {
         success: false,
-        error: String(error),
       },
       {
         status: 500,
