@@ -7,11 +7,11 @@ import Header from "../sections/Header";
 
 const categories = [
   "All Results",
-  "Porcelain Veneers",
-  "Composite Veneers",
-  "Smile Makeover",
-  "Close Gaps",
-  "Whitening + Veneers",
+//   "Porcelain Veneers",
+//   "Composite Veneers",
+//   "Smile Makeover",
+//   "Close Gaps",
+//   "Whitening + Veneers",
 ];
 
 
