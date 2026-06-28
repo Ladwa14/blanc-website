@@ -270,6 +270,7 @@ const handleSubmit = async () => {
     +91 9619666607
   </a>
 </div>
+          </div>
 
           {/* SOCIALS */}
          <div>
