@@ -221,6 +221,16 @@ const handleSubmit = async () => {
         ESTHETICIANS AT BLANC
       </Link>
     </li>
+
+ <li>
+      <Link
+        href="/results"
+        className="hover:opacity-60 transition-opacity duration-300"
+      >
+       RESULTS
+      </Link>
+    </li>
+
   </ul>
 </div>
 
