@@ -246,36 +246,83 @@ const handleSubmit = async () => {
             </div>
 
             <div>
-              <p className="font-playfair text-gray-500 text-[13px] tracking-wide">
-                EMAIL US AT
-              </p>
-              <p className="font-manrope text-black text-[13px]">
-                info@blanc.com
-              </p>
-            </div>
+  <p className="font-playfair text-gray-500 text-[13px] tracking-wide">
+    EMAIL US AT
+  </p>
 
-            <div>
-              <p className="font-playfair text-gray-500 text-[13px] tracking-wide">
-                CALL US AT
-              </p>
-              <p className="font-manrope text-black text-[13px]">
-                +91 9619666607
-              </p>
-            </div>
-          </div>
+  <a
+    href="mailto:info@blancesthetics.com"
+    className="font-manrope text-black text-[13px] hover:opacity-70 transition"
+  >
+    info@blancesthetics.com
+  </a>
+</div>
+
+<div>
+  <p className="font-playfair text-gray-500 text-[13px] tracking-wide">
+    CALL US AT
+  </p>
+
+  <a
+    href="tel:+919619666607"
+    className="font-manrope text-black text-[13px] hover:opacity-70 transition"
+  >
+    +91 9619666607
+  </a>
+</div>
 
           {/* SOCIALS */}
-          <div>
-            <p className="font-playfair text-gray-500 mb-4 tracking-wide text-[13px]">
-              SOCIALS
-            </p>
-            <ul className="font-manrope text-black space-y-2 text-[13px]">
-              <li>FACEBOOK</li>
-              <li>INSTAGRAM</li>
-              <li>YOUTUBE</li>
-              <li>X</li>
-            </ul>
-          </div>
+         <div>
+  <p className="font-playfair text-gray-500 mb-4 tracking-wide text-[13px]">
+    SOCIALS
+  </p>
+
+  <ul className="font-manrope text-black space-y-2 text-[13px]">
+    <li>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:opacity-70 transition"
+      >
+        FACEBOOK
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="https://www.instagram.com/blancesthetics"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:opacity-70 transition"
+      >
+        INSTAGRAM
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:opacity-70 transition"
+      >
+        YOUTUBE
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="https://x.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:opacity-70 transition"
+      >
+        X
+      </a>
+    </li>
+  </ul>
+</div>
         </div>
 
         {/* DIVIDER */}
