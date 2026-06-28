@@ -5,8 +5,10 @@ import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 
 const images = [
-  "/Blanc_website_2.webp",
-  "/Smile.webp",
+  "/Atelier1.webp",
+  "/Atelier2.webp",
+  "/Atelier3.webp",
+  "/Atelier4.webp"
 ];
 
 export default function Page() {
