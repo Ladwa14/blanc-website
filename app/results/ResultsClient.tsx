@@ -57,7 +57,7 @@ export default function Page() {
 
       <main className="bg-white pt-32 pb-24">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
 
           {/* Top Label */}
           <p className="text-center text-xs tracking-[0.3em] text-gray-500 font-playfair uppercase">
@@ -98,21 +98,19 @@ export default function Page() {
 
           {/* Grid */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
 
             {filteredResults.map((item, index) => (
 
-              <div
-                key={index}
-                className="overflow-hidden rounded-2xl border border-gray-200 bg-white"
-              >
-
-                <img
-                  src={item.image}
-                  alt={`Result ${index + 1}`}
-                  className="w-full h-auto object-cover"
-                />
-
+           <div
+  key={index}
+  className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-lg transition duration-300"
+>
+<img
+  src={item.image}
+  alt={`Result ${index + 1}`}
+  className="w-full aspect-[4/5] object-cover transition duration-500 hover:scale-105"
+/>
               </div>
 
             ))}
