@@ -65,12 +65,12 @@ export default function Page() {
           </p>
 
           {/* Heading */}
-          <h1 className="mt-5 text-center font-playfair text-4xl md:text-6xl text-[#2b2b2b]">
+          <h1 className="mt-5 text-center font-playfair text-4xl md:text-5xl text-[#2b2b2b]">
             Real <span className="italic">Blanc</span> Results
           </h1>
 
           {/* Description */}
-          <p className="mt-8 max-w-2xl mx-auto text-center text-gray-600 font-manrope leading-8">
+          <p className="mt-3 max-w-2xl mx-auto text-sm text-center text-gray-600 font-manrope leading-8">
             Discover real smile transformations crafted with precision,
             designed for confidence.
           </p>
