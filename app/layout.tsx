@@ -24,11 +24,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Blanc",
-    template: "%s | Blanc",
-  },
-  description: "Luxury aesthetic dentistry by Blanc.",
+  // title: {
+  //   default: "Blanc",
+  //   template: "%s | Blanc",
+  // },
+  // description: "Luxury aesthetic dentistry by Blanc.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
