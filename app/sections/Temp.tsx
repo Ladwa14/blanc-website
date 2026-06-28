@@ -15,9 +15,9 @@ export default function Hero() {
   const imageList = [
     "/Blanc_website_2.webp",
     "/Smile.webp",
-    "/Above_the_fold_3.webp",
-    "/Above_the_fold_4.webp",
-    "/Above_the_fold_5.webp",
+    "/homeimage_3.webp",
+    "/homeimage_4.webp",
+    "/homeimage_5.webp",
     "/Above_the_fold_last_image.webp"
   ];
 
