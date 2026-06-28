@@ -76,7 +76,7 @@ export default function Page() {
           </p>
 
           {/* Pills */}
-          <div className="flex flex-wrap justify-center gap-3 mt-14">
+          <div className="flex flex-wrap justify-center gap-3 mt-4">
 
             {categories.map((category) => (
 
@@ -98,7 +98,7 @@ export default function Page() {
 
           {/* Grid */}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 max-w-6xl mx-auto">
 
             {filteredResults.map((item, index) => (
 
