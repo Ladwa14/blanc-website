@@ -5,14 +5,14 @@ import Link from "next/link";
 import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 
-// const categories = [
-//   // "All Results",
-// //   "Porcelain Veneers",
-// //   "Composite Veneers",
-// //   "Smile Makeover",
-// //   "Close Gaps",
-// //   "Whitening + Veneers",
-// ];
+const categories = [
+  // "All Results",
+//   "Porcelain Veneers",
+//   "Composite Veneers",
+//   "Smile Makeover",
+//   "Close Gaps",
+//   "Whitening + Veneers",
+];
 
 
 const results = [
@@ -77,7 +77,7 @@ export default function Page() {
           {/* Pills */}
           <div className="flex flex-wrap justify-center gap-3 mt-4">
 
-            {categories.map((category) => (
+            {/* {categories.map((category) => (
 
               <button
                 key={category}
@@ -91,7 +91,10 @@ export default function Page() {
                 {category}
               </button>
 
-            ))}
+            )
+            
+            
+            )} */}
 
           </div>
 
