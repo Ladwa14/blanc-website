@@ -8,7 +8,7 @@ const images = [
   "/Atelier1.webp",
   "/Atelier2.webp",
   "/Atelier3.webp",
-  "/Atelier4.webp"
+  // "/Atelier4.webp"
 ];
 
 export default function Page() {
