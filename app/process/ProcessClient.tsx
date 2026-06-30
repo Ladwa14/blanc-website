@@ -7,7 +7,7 @@ import Header from "../sections/Header";
 
 const images = [
   "/Our_process_1.webp",
-  "/Our_process_2.webp"
+  // "/Our_process_2.webp"
   // "/Blanc_website_2.webp",
   // "/Smile.webp",
   // "/Above_the_fold_3.webp",
