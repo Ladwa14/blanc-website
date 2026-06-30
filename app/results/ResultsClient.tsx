@@ -5,14 +5,14 @@ import Link from "next/link";
 import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 
-const categories = [
-  "All Results",
-//   "Porcelain Veneers",
-//   "Composite Veneers",
-//   "Smile Makeover",
-//   "Close Gaps",
-//   "Whitening + Veneers",
-];
+// const categories = [
+//   // "All Results",
+// //   "Porcelain Veneers",
+// //   "Composite Veneers",
+// //   "Smile Makeover",
+// //   "Close Gaps",
+// //   "Whitening + Veneers",
+// ];
 
 
 const results = [
@@ -61,7 +61,7 @@ export default function Page() {
 
           {/* Top Label */}
           <p className="text-center text-xs tracking-[0.3em] text-gray-500 font-playfair uppercase">
-            REAL RESULTS. REAL CONFIDENCE.
+            NATURAL. BALANCED. AUTHENTIC
           </p>
 
           {/* Heading */}
@@ -71,8 +71,7 @@ export default function Page() {
 
           {/* Description */}
           <p className="mt-3 max-w-2xl mx-auto text-sm text-center text-gray-600 font-manrope leading-8">
-            Discover real smile transformations crafted with precision,
-            designed for confidence.
+            Every smile is unique. Every transformation is designed with precision, artistry and you in mind.
           </p>
 
           {/* Pills */}
