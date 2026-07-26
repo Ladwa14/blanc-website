@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Results | Blanc",
   description:
     "Explore real smile transformations by Blanc. Discover porcelain veneers, composite veneers, smile makeovers and more.",
+     alternates: {
+    canonical: "https://www.blancesthetics.com/results",
+  },
 };
 
 export default function Page() {

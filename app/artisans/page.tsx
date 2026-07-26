@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Artisans of Blanc | Blanc",
   description:
     "Meet the artisans behind Blanc, where craftsmanship, precision, and aesthetic expertise come together to create timeless smiles.",
+     alternates: {
+    canonical: "https://www.blancesthetics.com/artisans",
+  },
 };
 
 export default function Page() {

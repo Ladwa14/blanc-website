@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "The Esthetician | Blanc",
   description:
     "Learn about the expertise, vision, and patient-centered approach that guide every smile transformation at Blanc.",
+     alternates: {
+    canonical: "https://www.blancesthetics.com/esthetician",
+  },
 };
 
 export default function Page() {
