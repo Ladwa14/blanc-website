@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import FaqClient from "./FaqClient";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "FAQ | Blanc",
@@ -230,13 +229,12 @@ const faqSchema = {
 export default function Page() {
   return (
     <>
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(faqSchema),
+  }}
+/>
 
       <FaqClient />
     </>
