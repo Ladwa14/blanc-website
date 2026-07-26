@@ -444,7 +444,7 @@ const handleSubmit = async () => {
 
                 {step === 1 && (
                   <>
-                    <h2 className="font-playfair text-[30px] md:text-[30px] text-black mb-10">
+                   <h2 className="font-playfair text-[28px] text-black mb-10">
                       Select Date and Time
                     </h2>
 
@@ -474,7 +474,7 @@ const handleSubmit = async () => {
     {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((day) => (
       <p
         key={day}
-        className="font-manrope text-[11px] text-gray-500"
+        className="font-manrope text-[15px] text-gray-500"
       >
         {day}
       </p>
@@ -488,7 +488,7 @@ const handleSubmit = async () => {
       <div key={day} className="flex justify-center">
         <button
           onClick={() => setSelectedDate(day)}
-          className={`w-10 h-10 rounded-full font-manrope text-[13px] transition ${
+          className={`w-10 h-10 rounded-full font-manrope text-[15px] transition ${
             selectedDate === day
               ? "bg-[#2B2B2B] text-white"
               : "hover:bg-gray-100"
@@ -503,7 +503,7 @@ const handleSubmit = async () => {
                       {/* TIMES */}
 
                       <div className="border-t border-gray-200 pt-10 mt-10">
-                       <h3 className="font-playfair text-[28px] mb-8">
+                      <h3 className="font-playfair text-[28px] mb-8">
   {new Date(
     currentYear,
     currentMonth,
@@ -528,7 +528,7 @@ const handleSubmit = async () => {
                             <button
                               key={time}
                               onClick={() => setSelectedTime(time)}
-                              className={`border px-6 py-3 font-manrope text-[13px] transition ${
+                              className={`border px-6 py-3 font-manrope text-[15px] transition ${
                                 selectedTime === time
                                   ? "bg-[#2B2B2B] text-white border-[#2B2B2B]"
                                   : "border-gray-300"
@@ -547,7 +547,7 @@ const handleSubmit = async () => {
                             Timezone<span className="text-red-500">*</span>
                           </p>
 
-                          <select className="w-full max-w-[420px] border border-gray-300 h-[52px] px-5 font-manrope outline-none">
+                          <select className="w-full max-w-[420px] border border-gray-300 h-[52px] px-5 font-manrope text-[15px] outline-none">
                             <option>India Standard Time (IST)</option>
                           </select>
                         </div>
@@ -557,7 +557,7 @@ const handleSubmit = async () => {
                         <div className="flex justify-end mt-16">
                           <button
                             onClick={() => setStep(2)}
-                            className="bg-[#2B2B2B] text-white px-16 py-5 font-manrope"
+                            className="bg-[#2B2B2B] text-white px-16 py-5 font-manrope text-[15px]"
                           >
                             Next
                           </button>
@@ -571,7 +571,7 @@ const handleSubmit = async () => {
 
                 {step === 2 && (
                   <>
-                    <h2 className="font-playfair text-[30px] text-black mb-12">
+                   <h2 className="font-playfair text-[28px] text-black mb-12">
                       Enter Details
                     </h2>
 
@@ -589,7 +589,7 @@ const handleSubmit = async () => {
   placeholder="Enter patient's name"
   value={name}
   onChange={(e) => setName(e.target.value)}
-  className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope"
+  className="w-full border border-gray-300 h-[52px] px-5 outline-none font-manrope text-[15px]"
 />
                       </div>
 
@@ -602,7 +602,7 @@ const handleSubmit = async () => {
                         </label>
 
                         <div className="flex">
-                          <div className="border border-gray-300 border-r-0 h-[52px] px-5 flex items-center font-manrope">
+                          <div className="border border-gray-300 border-r-0 h-[52px] px-5 flex items-center font-manrope text-[15px]">
                             +91
                           </div>
 
@@ -650,7 +650,7 @@ const handleSubmit = async () => {
                           ].map((item) => (
                             <label
                               key={item}
-                              className="flex items-center gap-3 font-manrope"
+                             className="flex items-center gap-3 font-manrope text-[15px]"
                             >
                            <input
   type="radio"
@@ -675,7 +675,7 @@ const handleSubmit = async () => {
                        <textarea
   value={message}
   onChange={(e) => setMessage(e.target.value)}
-  className="w-full border border-gray-300 h-[110px] p-5 outline-none resize-none font-manrope"
+  className="w-full border border-gray-300 h-[110px] p-5 outline-none resize-none font-manrope text-[15px]"
 />
                       </div>
 
@@ -685,7 +685,7 @@ const handleSubmit = async () => {
                        <button
   onClick={handleSubmit}
   disabled={loading}
-  className="bg-[#2B2B2B] text-white px-12 py-3 text-[14px] font-manrope disabled:opacity-50"
+  className="bg-[#2B2B2B] text-white px-12 py-3 text-[15px] font-manrope disabled:opacity-50"
 >
   {loading ? "Submitting..." : "Submit"}
 </button>
