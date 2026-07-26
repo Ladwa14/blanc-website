@@ -180,6 +180,12 @@ return () => {
   showBackButton={false}
 />
       
+
+      <h1 className="sr-only">
+  Cosmetic Dentistry & Smile Design in Juhu, Mumbai
+</h1>
+
+
       {/* 🔥 SLIDE IMAGES */}
       {imageList.map((img, i) => (
         <img
