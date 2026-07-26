@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: ?
+Disallow: */feed/*
+Disallow: */tag/*
+Disallow: */category/*
+Disallow: *?*
+Disallow: /wp-admin/
+
+https://www.blancaesthetics.com/sitemap.xml
