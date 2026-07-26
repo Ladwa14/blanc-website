@@ -60,6 +60,23 @@ const months = [
     "05:30pm",
   ];
 
+  const convertToMinutes = (time: string) => {
+  const match = time.match(/(\d+):(\d+)(am|pm)/i);
+
+  if (!match) return 0;
+
+  let hour = parseInt(match[1], 10);
+  const minute = parseInt(match[2], 10);
+  const period = match[3].toLowerCase();
+
+  if (period === "pm" && hour !== 12) hour += 12;
+  if (period === "am" && hour === 12) hour = 0;
+
+  return hour * 60 + minute;
+};
+
+
+
 const daysInMonth = new Date(
   currentYear,
   currentMonth + 1,
@@ -79,6 +96,22 @@ const calendarDays = Array.from(
   (_, i) => i + 1
 );
 
+
+const now = new Date();
+
+const isToday =
+  selectedDate === today.getDate() &&
+  currentMonth === today.getMonth() &&
+  currentYear === today.getFullYear();
+
+const currentMinutes =
+  now.getHours() * 60 + now.getMinutes();
+
+const availableTimes = isToday
+  ? times.filter(
+      (time) => convertToMinutes(time) > currentMinutes
+    )
+  : times;
 
 
 const prevMonth = () => {
@@ -482,8 +515,16 @@ const handleSubmit = async () => {
   })}
 </h3>
 
-                        <div className="flex flex-wrap gap-4">
-                          {times.map((time) => (
+{availableTimes.length === 0 && (
+  <p className="font-manrope text-[14px] text-gray-500 mb-4">
+    No slots available for today.
+  </p>
+)}
+
+
+                        {availableTimes.length > 0 && (
+  <div className="flex flex-wrap gap-4">
+                          {availableTimes.map((time) => (
                             <button
                               key={time}
                               onClick={() => setSelectedTime(time)}
@@ -496,7 +537,8 @@ const handleSubmit = async () => {
                               {time}
                             </button>
                           ))}
-                        </div>
+                       </div>
+)}
 
                         {/* TIMEZONE */}
 
