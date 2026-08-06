@@ -14,6 +14,7 @@ export const metadata: Metadata = {
      alternates: {
     canonical: "https://www.blancesthetics.com/",
   },
+
 };
 
 

@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+  verification: {
+    google: "Q5Aoh5U7KwRhhOoe_d03nGHZC-NwFIZLd8ebM3pjuJA",
+  },
+};
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -46,6 +53,22 @@ export default function RootLayout({
       >
         {children}
       </body>
+
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-HT9M6172N9"
+        strategy="afterInteractive"
+      />
+
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-HT9M6172N9');
+        `}
+      </Script>
     </html>
   );
 }
