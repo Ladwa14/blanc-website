@@ -38,7 +38,7 @@ export default function BlogPage() {
       {/* =========================
           BLOG HEADER
       ========================= */}
-      <section className="bg-[#171717] text-white h-[128px] flex flex-col items-center justify-center">
+      <section className="bg-[#171717] text-white h-[200px] flex flex-col items-center justify-center">
         <h1 className="font-manrope font-bold text-[18px] md:text-[20px]">
           BLOG
         </h1>
