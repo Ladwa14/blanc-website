@@ -78,7 +78,7 @@ export default function BlogPage() {
                   {/* CONTENT */}
                   <div className="pt-4">
 
-                    <p className="font-manrope font-bold text-[11px] tracking-[0.08em] text-[#111] uppercase">
+                    <p className="font-manrope font-bold text-[11px] tracking-[0.08em] text-[#111] ">
                       {blog.category}
                     </p>
 
@@ -86,13 +86,13 @@ export default function BlogPage() {
                       {blog.title}
                     </h2>
 
-                    <p className="font-manrope text-[11px] tracking-[0.12em] text-[#555] uppercase mt-1 leading-[1.6] max-w-[500px]">
+                    <p className="font-manrope text-[11px] tracking-[0.12em] text-[#555] mt-1 leading-[1.6] max-w-[500px]">
                       {blog.excerpt}
                     </p>
 
                     <div className="inline-block mt-5 pb-1 border-b border-black">
 
-                      <span className="font-manrope text-[11px] tracking-[0.18em] text-[#111] uppercase">
+                      <span className="font-manrope text-[11px] tracking-[0.18em] text-[#111] ">
                         READ MORE
                       </span>
 

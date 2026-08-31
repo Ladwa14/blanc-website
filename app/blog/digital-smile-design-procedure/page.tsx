@@ -17,7 +17,7 @@ export default function DigitalSmileDesignPage() {
       {/* =========================
           BLOG HERO
       ========================= */}
-      <section className="bg-[#f7f7f2] px-6 md:px-8 pt-10 md:pt-16">
+      <section className="bg-[#ffffff] px-6 md:px-8 pt-10 md:pt-16">
         <div className="max-w-[1000px] mx-auto">
 
           {/* BLOG IMAGE */}
@@ -48,7 +48,7 @@ export default function DigitalSmileDesignPage() {
       {/* =========================
           ARTICLE CONTENT
       ========================= */}
-      <main className="bg-[#f7f7f2] px-6 md:px-8 pb-20">
+      <main className="bg-[#ffffff] px-6 md:px-8 pb-20">
 
         <article className="max-w-[720px] mx-auto">
 
