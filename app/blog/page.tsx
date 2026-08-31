@@ -8,7 +8,7 @@ import Footer from "../sections/Footer";
 const blogs = [
   {
     slug: "digital-smile-design-procedure",
-    image: "/blog/digital-smile-design.webp",
+    image: "/How_Do_Veneers_for_Gap_Teeth_Work.webp",
     category: "DIGITAL SMILE DESIGN",
     title:
       "EVERYTHING YOU SHOULD KNOW ABOUT THE DIGITAL SMILE DESIGN PROCEDURE",
@@ -17,7 +17,7 @@ const blogs = [
   },
   {
     slug: "veneers-for-crooked-teeth",
-    image: "/blog/veneers-crooked-teeth.webp",
+    image: "/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile_.webp",
     category: "VENEERS",
     title: "VENEERS FOR CROOKED TEETH",
     excerpt:
