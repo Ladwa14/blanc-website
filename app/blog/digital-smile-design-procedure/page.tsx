@@ -23,7 +23,7 @@ export default function DigitalSmileDesignPage() {
           {/* BLOG IMAGE */}
           <div className="max-w-[760px] mx-auto">
             <img
-              src="/blog/digital-smile-design.webp"
+              src="/How_Do_Veneers_for_Gap_Teeth_Work.webp"
               alt="Digital Smile Design Procedure"
               className="w-full aspect-[16/9] object-cover"
             />
