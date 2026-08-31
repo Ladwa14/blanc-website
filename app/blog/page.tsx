@@ -51,7 +51,7 @@ export default function BlogPage() {
       {/* =========================
           BLOG GRID
       ========================= */}
-      <section className="bg-[#f7f7f2] py-16 md:py-20 px-6 md:px-10">
+      <section className="bg-[#ffffff] py-16 md:py-20 px-6 md:px-10">
         <div className="max-w-[1020px] mx-auto">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-14">
