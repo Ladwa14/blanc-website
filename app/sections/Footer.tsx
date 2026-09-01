@@ -314,7 +314,7 @@ const handleSubmit = async () => {
   <ul className="font-manrope text-black space-y-2 text-[13px]">
     <li>
       <a
-        href="https://www.facebook.com/"
+        href="https://www.facebook.com/profile.php?id=61593985318197"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-70 transition"
@@ -336,7 +336,7 @@ const handleSubmit = async () => {
 
     <li>
       <a
-        href="https://www.youtube.com/"
+        href="https://www.youtube.com/@blancesthetics"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-70 transition"
@@ -347,7 +347,7 @@ const handleSubmit = async () => {
 
     <li>
       <a
-        href="https://x.com/"
+        href="https://x.com/BlancEsthetics"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-70 transition"
