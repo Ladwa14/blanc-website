@@ -6,6 +6,11 @@ import Footer from "../../sections/Footer";
 
 export default function VeneersForCrookedTeethPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
   return (
     <>
@@ -53,7 +58,9 @@ export default function VeneersForCrookedTeethPage() {
 
         <article className="max-w-[720px] mx-auto">
 
-          {/* INTRODUCTION */}
+          {/* =========================
+              INTRODUCTION
+          ========================= */}
 
           <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444] mb-6">
             A crooked smile can make some people feel hesitant to smile freely
@@ -241,7 +248,6 @@ export default function VeneersForCrookedTeethPage() {
               While every case is different, the veneer process at Blanc
               typically involves several carefully planned stages.
             </p>
-
 
             <div className="space-y-8">
 
@@ -488,7 +494,7 @@ export default function VeneersForCrookedTeethPage() {
 
 
           {/* =========================
-              FAQ
+              FAQ ACCORDION
           ========================= */}
 
           <section className="border-t border-black/10 pt-10">
@@ -501,97 +507,243 @@ export default function VeneersForCrookedTeethPage() {
               Frequently Asked Questions
             </h2>
 
+            <div className="border-t border-black/10">
 
-            <div className="space-y-8">
+              {/* FAQ 1 */}
+              <div className="border-b border-black/10">
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  1. Can veneers fix crooked teeth?
-                </h3>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(1)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 1}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    1. Can veneers fix crooked teeth?
+                  </span>
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Veneers can improve the appearance of mildly crooked teeth by
-                  changing their visible shape and contours. They do not
-                  physically move the teeth.
-                </p>
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 1 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 1 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Veneers can improve the appearance of mildly crooked teeth
+                      by changing their visible shape and contours. They do not
+                      physically move the teeth.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  2. Can I get veneers without braces?
-                </h3>
+              {/* FAQ 2 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Yes, in selected cases where the alignment concern is mild
-                  and veneers can achieve the desired result.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(2)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 2}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    2. Can I get veneers without braces?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 2 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 2 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Yes, in selected cases where the alignment concern is mild
+                      and veneers can achieve the desired result.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  3. Are veneers suitable for severely crooked teeth?
-                </h3>
+              {/* FAQ 3 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Generally, no. Braces or clear aligners may be more
-                  appropriate for significant misalignment.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(3)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 3}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    3. Are veneers suitable for severely crooked teeth?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 3 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 3 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Generally, no. Braces or clear aligners may be more
+                      appropriate for significant misalignment.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  4. Are veneers better than braces for crooked teeth?
-                </h3>
+              {/* FAQ 4 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Both treatments serve different purposes. Veneers change the
-                  appearance of teeth, while braces and clear aligners
-                  reposition them. The right option depends on your dental
-                  condition and aesthetic goals.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(4)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 4}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    4. Are veneers better than braces for crooked teeth?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 4 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 4 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Both treatments serve different purposes. Veneers change
+                      the appearance of teeth, while braces and clear aligners
+                      reposition them. The right option depends on your dental
+                      condition and aesthetic goals.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  5. How long do veneers last?
-                </h3>
+              {/* FAQ 5 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  With proper care and regular dental check-ups, veneers can
-                  last for many years. Their lifespan varies depending on the
-                  material, oral hygiene, bite, and individual habits.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(5)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 5}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    5. How long do veneers last?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 5 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 5 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      With proper care and regular dental check-ups, veneers can
+                      last for many years. Their lifespan varies depending on
+                      the material, oral hygiene, bite, and individual habits.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  6. How many veneers are needed for a straighter-looking
-                  smile?
-                </h3>
+              {/* FAQ 6 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  The number depends on your smile, the teeth being treated, and
-                  your aesthetic goals. This is determined during your
-                  personalised smile assessment.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(6)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 6}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    6. How many veneers are needed for a straighter-looking
+                    smile?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 6 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 6 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      The number depends on your smile, the teeth being treated,
+                      and your aesthetic goals. This is determined during your
+                      personalised smile assessment.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  7. How do I know if veneers are right for my crooked teeth?
-                </h3>
+              {/* FAQ 7 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  A personalised consultation can determine whether veneers are
-                  appropriate based on your alignment, bite, dental health, and
-                  aesthetic goals.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(7)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 7}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    7. How do I know if veneers are right for my crooked teeth?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 7 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 7 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      A personalised consultation can determine whether veneers
+                      are appropriate based on your alignment, bite, dental
+                      health, and aesthetic goals.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
             </div>

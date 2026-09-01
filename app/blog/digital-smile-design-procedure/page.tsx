@@ -6,6 +6,11 @@ import Footer from "../../sections/Footer";
 
 export default function DigitalSmileDesignPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
   return (
     <>
@@ -52,7 +57,9 @@ export default function DigitalSmileDesignPage() {
 
         <article className="max-w-[720px] mx-auto">
 
-          {/* INTRODUCTION */}
+          {/* =========================
+              INTRODUCTION
+          ========================= */}
 
           <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444] mb-6">
             A smile is rarely just about teeth. It is proportion, symmetry,
@@ -196,7 +203,6 @@ export default function DigitalSmileDesignPage() {
                 </p>
               </div>
 
-
               <div>
                 <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
                   2. Digital analysis
@@ -210,7 +216,6 @@ export default function DigitalSmileDesignPage() {
                   a balanced and harmonious smile for your individual features.
                 </p>
               </div>
-
 
               <div>
                 <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
@@ -230,7 +235,6 @@ export default function DigitalSmileDesignPage() {
                   tooth shape, length, proportion, and overall appearance.
                 </p>
               </div>
-
 
               <div>
                 <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
@@ -252,7 +256,6 @@ export default function DigitalSmileDesignPage() {
                 </p>
               </div>
 
-
               <div>
                 <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
                   5. Mock-up and trial smile
@@ -266,7 +269,6 @@ export default function DigitalSmileDesignPage() {
                   appropriate.
                 </p>
               </div>
-
 
               <div>
                 <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
@@ -308,6 +310,7 @@ export default function DigitalSmileDesignPage() {
             </p>
 
             <ul className="space-y-3 pl-5 mb-6">
+
               <li className="list-disc font-manrope text-[13px] md:text-[14px] leading-[1.8] text-[#444]">
                 Considering veneers or other cosmetic dental treatments
               </li>
@@ -328,6 +331,7 @@ export default function DigitalSmileDesignPage() {
               <li className="list-disc font-manrope text-[13px] md:text-[14px] leading-[1.8] text-[#444]">
                 Considering a combination of cosmetic dental treatments
               </li>
+
             </ul>
 
             <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444] mb-5">
@@ -472,7 +476,7 @@ export default function DigitalSmileDesignPage() {
 
 
           {/* =========================
-              FAQ
+              FAQ ACCORDION
           ========================= */}
 
           <section className="border-t border-black/10 pt-10">
@@ -485,137 +489,346 @@ export default function DigitalSmileDesignPage() {
               Frequently Asked Questions
             </h2>
 
+            <div className="border-t border-black/10">
 
-            <div className="space-y-8">
+              {/* FAQ 1 */}
+              <div className="border-b border-black/10">
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  1. What is Digital Smile Design?
-                </h3>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(1)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 1}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    1. What is Digital Smile Design?
+                  </span>
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  It's a technology-driven process that uses photos, videos,
-                  and 3D scans to let you preview your new smile digitally
-                  before treatment begins. It replaces guesswork with a visual,
-                  collaborative plan.
-                </p>
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 1 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 1 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      It's a technology-driven process that uses photos, videos,
+                      and 3D scans to let you preview your new smile digitally
+                      before treatment begins. It replaces guesswork with a
+                      visual, collaborative plan.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  2. How does the smile design process work?
-                </h3>
+              {/* FAQ 2 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  It follows four steps: consultation, imaging/3D scanning,
-                  digital design creation, and a mock-up preview. Once approved,
-                  the design becomes your treatment blueprint.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(2)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 2}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    2. How does the smile design process work?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 2 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 2 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      It follows four steps: consultation, imaging/3D scanning,
+                      digital design creation, and a mock-up preview. Once
+                      approved, the design becomes your treatment blueprint.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  3. Is this procedure painful?
-                </h3>
+              {/* FAQ 3 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  No, the planning stage is completely non-invasive, just
-                  photos, scans, and software. Discomfort only comes later if
-                  you proceed with procedures like veneers.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(3)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 3}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    3. Is this procedure painful?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 3 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 3 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      No, the planning stage is completely non-invasive, just
+                      photos, scans, and software. Discomfort only comes later
+                      if you proceed with procedures like veneers.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  4. How much does a digital smile makeover cost?
-                </h3>
+              {/* FAQ 4 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Full treatment can range from $1,000 to $50,000 depending on
-                  procedures involved. The planning session itself is sometimes
-                  free with a consultation.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(4)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 4}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    4. How much does a digital smile makeover cost?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 4 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 4 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Full treatment can range from $1,000 to $50,000 depending
+                      on procedures involved. The planning session itself is
+                      sometimes free with a consultation.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  5. What treatments can be planned this way?
-                </h3>
+              {/* FAQ 5 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Veneers, implants, crowns, orthodontics, whitening, gum
-                  contouring, and full-mouth rehabilitation. It covers both
-                  cosmetic and restorative work.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(5)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 5}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    5. What treatments can be planned this way?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 5 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 5 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Veneers, implants, crowns, orthodontics, whitening, gum
+                      contouring, and full-mouth rehabilitation. It covers both
+                      cosmetic and restorative work.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  6. Can I see my new smile before treatment starts?
-                </h3>
+              {/* FAQ 6 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Yes, that's the main benefit of this approach. You get a
-                  digital simulation and often a physical mock-up to try before
-                  committing.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(6)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 6}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    6. Can I see my new smile before treatment starts?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 6 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 6 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Yes, that's the main benefit of this approach. You get a
+                      digital simulation and often a physical mock-up to try
+                      before committing.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  7. How accurate is the final result compared to the preview?
-                </h3>
+              {/* FAQ 7 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Very accurate when done by an experienced dentist, though no
-                  simulation guarantees a 100% exact match. It's based on real
-                  facial and dental measurements.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(7)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 7}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    7. How accurate is the final result compared to the preview?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 7 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 7 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Very accurate when done by an experienced dentist, though
+                      no simulation guarantees a 100% exact match. It's based
+                      on real facial and dental measurements.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  8. Who's a good candidate for a smile redesign?
-                </h3>
+              {/* FAQ 8 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Anyone in good oral health wanting a personalized smile
-                  makeover. Existing issues like gum disease or cavities are
-                  treated first.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(8)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 8}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    8. Who's a good candidate for a smile redesign?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 8 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 8 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Anyone in good oral health wanting a personalized smile
+                      makeover. Existing issues like gum disease or cavities are
+                      treated first.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  9. How long does the whole process take?
-                </h3>
+              {/* FAQ 9 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Planning takes 1–2 visits; total treatment ranges from a few
-                  weeks to several months depending on complexity. Veneer-only
-                  cases move fastest.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(9)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 9}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    9. How long does the whole process take?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 9 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 9 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Planning takes 1–2 visits; total treatment ranges from a
+                      few weeks to several months depending on complexity.
+                      Veneer-only cases move fastest.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
 
-              <div>
-                <h3 className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222] mb-2">
-                  10. Does insurance cover smile design treatment?
-                </h3>
+              {/* FAQ 10 */}
+              <div className="border-b border-black/10">
 
-                <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
-                  Usually not, since it's classified as cosmetic planning.
-                  Restorative parts of the plan, like implants, may get partial
-                  coverage.
-                </p>
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(10)}
+                  className="w-full flex items-center justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === 10}
+                >
+                  <span className="font-manrope font-bold text-[13px] md:text-[14px] text-[#222]">
+                    10. Does insurance cover smile design treatment?
+                  </span>
+
+                  <span
+                    className="flex-shrink-0 font-manrope text-xl font-light text-[#222]"
+                    aria-hidden="true"
+                  >
+                    {openFaq === 10 ? "−" : "+"}
+                  </span>
+                </button>
+
+                {openFaq === 10 && (
+                  <div className="pb-5 pr-8">
+                    <p className="font-manrope text-[13px] md:text-[14px] leading-[1.9] text-[#444]">
+                      Usually not, since it's classified as cosmetic planning.
+                      Restorative parts of the plan, like implants, may get
+                      partial coverage.
+                    </p>
+                  </div>
+                )}
+
               </div>
 
             </div>
