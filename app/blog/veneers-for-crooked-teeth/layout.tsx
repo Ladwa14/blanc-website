@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Veneers for Crooked Teeth: Can They Straighten Your Smile? | Blanc Esthetics",
+  title: "Veneers for Crooked Teeth: Can Veneers Straighten Your Smile",
 
   description:
-    "Can veneers straighten crooked teeth? Learn how veneers can improve the appearance of mildly crooked teeth, when they may be suitable, and how the veneer process works at Blanc Esthetics.",
+    "Wondering if veneers can fix crooked or uneven teeth? Learn how dental veneers improve smile alignment and create a straighter, natural-looking smile.",
 
   alternates: {
     canonical:
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Veneers for Crooked Teeth: Can They Straighten Your Smile? | Blanc Esthetics",
+      "Veneers for Crooked Teeth: Can Veneers Straighten Your Smile",
 
     description:
-      "Learn how veneers can improve the appearance of mildly crooked teeth, when they may be suitable, and what to expect during the veneer treatment process at Blanc Esthetics.",
+      "Wondering if veneers can fix crooked or uneven teeth? Learn how dental veneers improve smile alignment and create a straighter, natural-looking smile.",
 
     url: "https://www.blancesthetics.com/blog/veneers-for-crooked-teeth",
 
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Veneers for Crooked Teeth: Can They Straighten Your Smile? | Blanc Esthetics",
+      "Veneers for Crooked Teeth: Can Veneers Straighten Your Smile",
 
     description:
-      "Discover how veneers can improve the appearance of mildly crooked teeth and when they may be suitable for a straighter-looking smile.",
+      "Wondering if veneers can fix crooked or uneven teeth? Learn how dental veneers improve smile alignment and create a straighter, natural-looking smile.",
 
     images: [
       "https://www.blancesthetics.com/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile_.webp",
