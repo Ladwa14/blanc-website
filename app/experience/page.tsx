@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Experience personalized consultations, thoughtful care, and a seamless journey designed around comfort, confidence, and aesthetics.",
     alternates: {
-    canonical: "https://www.blancesthetics.com/experience",
+    canonical: "https://www.blancveneers.com/experience",
   },
 };
 

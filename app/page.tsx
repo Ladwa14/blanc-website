@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Blanc offers personalized cosmetic dentistry, smile design, veneers, and aesthetic dental treatments in Mumbai.",
      alternates: {
-    canonical: "https://www.blancesthetics.com/",
+    canonical: "https://www.blancveneers.com/",
   },
 
 };

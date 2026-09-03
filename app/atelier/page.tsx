@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Discover the Blanc Atelier, a refined environment where advanced dentistry, artistry, and bespoke smile design meet.",
     alternates: {
-    canonical: "https://www.blancesthetics.com/atelier",
+    canonical: "https://www.blancveneers.com/atelier",
   },
 };
 

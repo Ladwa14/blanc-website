@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Understand Blanc's meticulous smile transformation process, from consultation and planning to final delivery and long-term care.",
      alternates: {
-    canonical: "https://www.blancesthetics.com/process",
+    canonical: "https://www.blancveneers.com/process",
   },
 };
 

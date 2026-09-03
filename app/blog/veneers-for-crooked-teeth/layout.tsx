@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical:
-      "https://www.blancesthetics.com/blog/veneers-for-crooked-teeth",
+      "https://www.blancveneers.com/blog/veneers-for-crooked-teeth",
   },
 
   robots: {

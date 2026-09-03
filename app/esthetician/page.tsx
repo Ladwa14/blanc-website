@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Learn about the expertise, vision, and patient-centered approach that guide every smile transformation at Blanc.",
      alternates: {
-    canonical: "https://www.blancesthetics.com/esthetician",
+    canonical: "https://www.blancveneers.com/esthetician",
   },
 };
 

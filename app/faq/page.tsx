@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Frequently asked questions about veneers, smile design, cosmetic dentistry, consultations, and the Blanc process.",
   alternates: {
-    canonical: "https://www.blancesthetics.com/faq",
+    canonical: "https://www.blancveneers.com/faq",
   },
 };
 
