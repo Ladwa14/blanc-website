@@ -1,49 +1,39 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-	<loc>https://www.blancesthetics.com/</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/craft</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/craft</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/artisans</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/artisans</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/esthetician</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/esthetician</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/experience</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/experience</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/process</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/process</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/faq</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/faq</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/results</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/results</loc>
 </url>
 <url>
-	<loc>https://www.blancesthetics.com/atelier</loc>
-	<lastmod>2026-07-25T12:25:12+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.blancveneers.com/atelier</loc>
+</url>
+<url>
+  <loc>https://www.blancveneers.com/blog</loc>
+</url>
+<url>
+  <loc>https://www.blancveneers.com/blog/digital-smile-design-procedure</loc>
+</url>
+<url>
+  <loc>https://www.blancveneers.com/blog/veneers-for-crooked-teeth</loc>
 </url>
 </urlset>
