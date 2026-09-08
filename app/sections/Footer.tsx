@@ -405,7 +405,7 @@ export default function Footer() {
           <div className="font-manrope text-[14px] sm:text-[15px] tracking-wide text-[#000000] text-center">
             Ask AI for summary of{" "}
             <strong className="font-semibold">
-              Blanc Esthetics
+              Blanc Veneers
             </strong>
           </div>
 
