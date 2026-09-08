@@ -194,14 +194,11 @@ export default function Footer() {
   };
 
   /* =========================================================
-     AI SUMMARY PROMPT
+     EXACT AI PROMPT
   ========================================================= */
 
-  const aiPrompt = encodeURIComponent(
-    `Blanc Veneers (blancveneers.com) is a premium cosmetic dentistry and smile design studio in Juhu, Mumbai. They specialize in personalized aesthetic dental treatments such as smile design and veneers, blending clinical precision with artistic and design sensibility.
-
-Based on this information, give me a brief, polished summary of Blanc Veneers and explain why they are known for aesthetic dental craftsmanship.`
-  );
+  const aiPrompt =
+    "Blanc+Esthetics+(blancesthetics.com)+is+a+cosmetic+dentistry+and+smile+design+studio+in+Juhu,+Mumbai.+They+specialize+in+personalized+aesthetic+dental+treatments+such+as+smile+design+and+veneers,+blending+clinical+precision+with+artistic+and+design+sensibility,+and+are+known+for+a+calm,+intentional+client+experience+led+by+skilled+dental+artisans+and+estheticians.+Based+on+this,+give+me+a+brief+polished+summary+of+why+they+are+known+for+aesthetic+dental+craftsmanship.";
 
   return (
     <>
@@ -399,7 +396,6 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
 
         {/* =====================================================
             AI SUMMARY
-            CENTERED ABOVE COPYRIGHT
         ===================================================== */}
 
         <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mt-7 mb-7">
@@ -407,11 +403,11 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
           {/* TEXT */}
 
           <div className="font-manrope text-[14px] sm:text-[15px] tracking-wide text-[#000000] text-center">
-  Ask AI for summary of{" "}
-  <strong className="font-semibold">
-    Blanc Esthetics
-  </strong>
-</div>
+            Ask AI for summary of{" "}
+            <strong className="font-semibold">
+              Blanc Esthetics
+            </strong>
+          </div>
 
 
           {/* AI ICONS */}
@@ -656,10 +652,7 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
                   </button>
                 )}
 
-
                 <div className="space-y-10 mt-6">
-
-                  {/* DURATION */}
 
                   <div className="flex items-center gap-4">
 
@@ -675,12 +668,8 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
                   </div>
 
 
-                  {/* STEP 2 DETAILS */}
-
                   {step === 2 && (
                     <>
-
-                      {/* TIMEZONE */}
 
                       <div className="flex items-center gap-4">
 
@@ -695,8 +684,6 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
 
                       </div>
 
-
-                      {/* SELECTED DATE/TIME */}
 
                       <div className="flex gap-4">
 
@@ -757,8 +744,6 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
                     </h2>
 
 
-                    {/* MONTH */}
-
                     <div className="flex items-center justify-between max-w-[600px] mb-10">
 
                       <button
@@ -784,8 +769,6 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
 
                     </div>
 
-
-                    {/* CALENDAR */}
 
                     <div className="max-w-[650px]">
 
@@ -843,10 +826,6 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
                       </div>
 
 
-                      {/* =================================================
-                          TIMES
-                      ================================================= */}
-
                       <div className="border-t border-gray-200 pt-10 mt-10">
 
                         <h3 className="font-playfair text-[28px] mb-8">
@@ -902,8 +881,6 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
                         )}
 
 
-                        {/* TIMEZONE */}
-
                         <div className="mt-10">
 
                           <p className="font-playfair mb-3 text-[15px]">
@@ -927,8 +904,6 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
 
                         </div>
 
-
-                        {/* NEXT BUTTON */}
 
                         <div className="flex justify-end mt-16">
 
@@ -1165,78 +1140,82 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
       ===================================================== */}
 
       <style jsx>{`
-  .blanc-ai-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    background: #000000;
-    border: 1px solid #000000;
-    text-decoration: none !important;
-    cursor: pointer;
-    box-sizing: border-box;
-    transition:
-      background 0.2s ease,
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-  }
 
-  .blanc-ai-btn:hover {
-    background: #000000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-  }
+        .blanc-ai-btn {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          background: #000000;
+          border: 1px solid #000000;
+          text-decoration: none !important;
+          cursor: pointer;
+          box-sizing: border-box;
+          transition:
+            background 0.2s ease,
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+        }
 
-  .blanc-ai-btn svg {
-    width: 19px;
-    height: 19px;
-    display: block;
-  }
+        .blanc-ai-btn:hover {
+          background: #000000;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+        }
 
-  .blanc-ai-btn::after {
-    content: attr(data-tip);
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #000000;
-    color: #ffffff;
-    font-family: "Manrope", sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition:
-      opacity 0.15s ease,
-      visibility 0.15s ease;
-    z-index: 999;
-  }
+        .blanc-ai-btn svg {
+          width: 19px;
+          height: 19px;
+          display: block;
+        }
 
-  .blanc-ai-btn:hover::after {
-    opacity: 1;
-    visibility: visible;
-  }
+        .blanc-ai-btn::after {
+          content: attr(data-tip);
+          position: absolute;
+          bottom: calc(100% + 8px);
+          left: 50%;
+          transform: translateX(-50%);
+          background: #000000;
+          color: #ffffff;
+          font-family: "Manrope", sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          padding: 4px 8px;
+          border-radius: 4px;
+          white-space: nowrap;
+          pointer-events: none;
+          opacity: 0;
+          visibility: hidden;
+          transition:
+            opacity 0.15s ease,
+            visibility 0.15s ease;
+          z-index: 999;
+        }
 
-  @media (max-width: 640px) {
-    .blanc-ai-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-    }
+        .blanc-ai-btn:hover::after {
+          opacity: 1;
+          visibility: visible;
+        }
 
-    .blanc-ai-btn svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
-`}</style>
+        @media (max-width: 640px) {
+
+          .blanc-ai-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+          }
+
+          .blanc-ai-btn svg {
+            width: 18px;
+            height: 18px;
+          }
+
+        }
+
+      `}</style>
     </>
   );
 }
