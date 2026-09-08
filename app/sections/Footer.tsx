@@ -406,12 +406,12 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
 
           {/* TEXT */}
 
-          <div className="font-manrope text-[14px] sm:text-[15px] tracking-wide text-[#18364f] text-center">
-            Ask AI for summary of{" "}
-            <strong className="font-semibold">
-              Blanc Esthetics
-            </strong>
-          </div>
+          <div className="font-manrope text-[14px] sm:text-[15px] tracking-wide text-[#000000] text-center">
+  Ask AI for summary of{" "}
+  <strong className="font-semibold">
+    Blanc Esthetics
+  </strong>
+</div>
 
 
           {/* AI ICONS */}
@@ -1165,82 +1165,78 @@ Based on this information, give me a brief, polished summary of Blanc Veneers an
       ===================================================== */}
 
       <style jsx>{`
+  .blanc-ai-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #000000;
+    border: 1px solid #000000;
+    text-decoration: none !important;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
 
-        .blanc-ai-btn {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 38px;
-          height: 38px;
-          border-radius: 8px;
-          background: #0d304e;
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          text-decoration: none !important;
-          cursor: pointer;
-          box-sizing: border-box;
-          transition:
-            background 0.2s ease,
-            transform 0.2s ease,
-            box-shadow 0.2s ease;
-        }
+  .blanc-ai-btn:hover {
+    background: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  }
 
-        .blanc-ai-btn:hover {
-          background: #123c60;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 14px rgba(13, 48, 78, 0.18);
-        }
+  .blanc-ai-btn svg {
+    width: 19px;
+    height: 19px;
+    display: block;
+  }
 
-        .blanc-ai-btn svg {
-          width: 19px;
-          height: 19px;
-          display: block;
-        }
+  .blanc-ai-btn::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.15s ease,
+      visibility 0.15s ease;
+    z-index: 999;
+  }
 
-        .blanc-ai-btn::after {
-          content: attr(data-tip);
-          position: absolute;
-          bottom: calc(100% + 8px);
-          left: 50%;
-          transform: translateX(-50%);
-          background: #0e121d;
-          color: #ffffff;
-          font-family: "Manrope", sans-serif;
-          font-size: 10px;
-          font-weight: 500;
-          padding: 4px 8px;
-          border-radius: 4px;
-          white-space: nowrap;
-          pointer-events: none;
-          opacity: 0;
-          visibility: hidden;
-          transition:
-            opacity 0.15s ease,
-            visibility 0.15s ease;
-          z-index: 999;
-        }
+  .blanc-ai-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
 
-        .blanc-ai-btn:hover::after {
-          opacity: 1;
-          visibility: visible;
-        }
+  @media (max-width: 640px) {
+    .blanc-ai-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
 
-        @media (max-width: 640px) {
-
-          .blanc-ai-btn {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-          }
-
-          .blanc-ai-btn svg {
-            width: 18px;
-            height: 18px;
-          }
-
-        }
-
-      `}</style>
+    .blanc-ai-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+`}</style>
     </>
   );
 }
