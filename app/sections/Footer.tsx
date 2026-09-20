@@ -198,7 +198,7 @@ export default function Footer() {
   ========================================================= */
 
   const aiPrompt =
-    "Blanc+Esthetics+(blancesthetics.com)+is+a+cosmetic+dentistry+and+smile+design+studio+in+Juhu,+Mumbai.+They+specialize+in+personalized+aesthetic+dental+treatments+such+as+smile+design+and+veneers,+blending+clinical+precision+with+artistic+and+design+sensibility,+and+are+known+for+a+calm,+intentional+client+experience+led+by+skilled+dental+artisans+and+estheticians.+Based+on+this,+give+me+a+brief+polished+summary+of+why+they+are+known+for+aesthetic+dental+craftsmanship.";
+    "Blanc+Veneers+(blancveneers.com)+is+a+cosmetic+dentistry+and+smile+design+studio+in+Juhu,+Mumbai.+They+specialize+in+personalized+aesthetic+dental+treatments+such+as+smile+design+and+veneers,+blending+clinical+precision+with+artistic+and+design+sensibility,+and+are+known+for+a+calm,+intentional+client+experience+led+by+skilled+dental+artisans+and+estheticians.+Based+on+this,+give+me+a+brief+polished+summary+of+why+they+are+known+for+aesthetic+dental+craftsmanship.";
 
   return (
     <>
