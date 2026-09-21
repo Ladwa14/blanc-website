@@ -284,6 +284,16 @@ export default function Footer() {
                 </Link>
               </li>
 
+
+              <li>
+  <Link
+    href="/blog"
+    className="hover:opacity-60 transition-opacity duration-300"
+  >
+    BLOG
+  </Link>
+</li>
+
             </ul>
           </div>
 
