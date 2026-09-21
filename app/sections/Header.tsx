@@ -80,74 +80,72 @@ export default function Header({
         </button>
 
         {/* MENU ITEMS */}
-        <nav className="flex flex-col items-center gap-8 px-8">
+       <nav className="flex flex-col items-center gap-5 md:gap-8 px-6">
 
-          <Link
-            href="/craft"
-            onClick={() => setMenuOpen(false)}
-          >
-            <span className="text-3xl md:text-5xl font-playfair block py-2">
-              The Craft
-            </span>
-          </Link>
+  <Link
+    href="/craft"
+    onClick={() => setMenuOpen(false)}
+  >
+    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+      The Craft
+    </span>
+  </Link>
 
-          <Link
-            href="/artisans"
-            onClick={() => setMenuOpen(false)}
-          >
-            <span className="text-3xl md:text-5xl font-playfair block py-2">
-              The Artisans
-            </span>
-          </Link>
+  <Link
+    href="/artisans"
+    onClick={() => setMenuOpen(false)}
+  >
+    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+      The Artisans
+    </span>
+  </Link>
 
-          <Link
-            href="/esthetician"
-            onClick={() => setMenuOpen(false)}
-          >
-            <span className="text-3xl md:text-5xl font-playfair block py-2">
-              The Esthetician
-            </span>
-          </Link>
+  <Link
+    href="/esthetician"
+    onClick={() => setMenuOpen(false)}
+  >
+    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+      The Esthetician
+    </span>
+  </Link>
 
-          <Link
-            href="/experience"
-            onClick={() => setMenuOpen(false)}
-          >
-            <span className="text-3xl md:text-5xl font-playfair block py-2">
-              The Experience
-            </span>
-          </Link>
+  <Link
+    href="/experience"
+    onClick={() => setMenuOpen(false)}
+  >
+    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+      The Experience
+    </span>
+  </Link>
 
-          <Link
-            href="/process"
-            onClick={() => setMenuOpen(false)}
-          >
-            <span className="text-3xl md:text-5xl font-playfair block py-2">
-              The Process
-            </span>
-          </Link>
+  <Link
+    href="/process"
+    onClick={() => setMenuOpen(false)}
+  >
+    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+      The Process
+    </span>
+  </Link>
 
+  <Link
+    href="/blog"
+    onClick={() => setMenuOpen(false)}
+  >
+    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+      Blog
+    </span>
+  </Link>
 
-<Link
-  href="/blog"
-  onClick={() => setMenuOpen(false)}
->
-  <span className="text-3xl md:text-5xl font-playfair block py-2">
-    Blog
-  </span>
-</Link>
+  <Link
+    href="/faq"
+    onClick={() => setMenuOpen(false)}
+  >
+    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+      FAQ
+    </span>
+  </Link>
 
-
-          <Link
-  href="/faq"
-  onClick={() => setMenuOpen(false)}
->
-  <span className="text-3xl md:text-5xl font-playfair block py-2">
-    FAQ
-  </span>
-</Link>
-
-        </nav>
+</nav>
       </div>
     </>
   );
