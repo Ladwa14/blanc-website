@@ -6,15 +6,16 @@ import Header from "../sections/Header";
 import Footer from "../sections/Footer";
 
 const blogs = [
-  {
-    slug: "digital-smile-design-procedure",
-    image: "/digital-smile-design-procedure.webp",
-    category: "DIGITAL SMILE DESIGN",
-    title:
-      "EVERYTHING YOU SHOULD KNOW ABOUT THE DIGITAL SMILE DESIGN PROCEDURE",
+
+{
+    slug: "how-do-veneers-for-gap-teeth-work",
+    image: "/How_Do_Veneers_for_Gap_Teeth_Work.webp",
+    category: "VENEERS",
+    title: "HOW DO VENEERS FOR GAP TEETH WORK?",
     excerpt:
-      "A complete guide to digital smile design, treatment planning, and personalised smile makeovers.",
+      "Understand how veneers can close gaps between teeth, how tooth proportions are planned, and what to expect during treatment.",
   },
+
 
   {
     slug: "veneers-for-crooked-teeth",
@@ -26,14 +27,17 @@ const blogs = [
       "Can veneers straighten your smile? Understanding how veneers can improve the appearance of mild alignment concerns.",
   },
 
-  {
-    slug: "how-do-veneers-for-gap-teeth-work",
-    image: "/How_Do_Veneers_for_Gap_Teeth_Work.webp",
-    category: "VENEERS",
-    title: "HOW DO VENEERS FOR GAP TEETH WORK?",
+{
+    slug: "digital-smile-design-procedure",
+    image: "/digital-smile-design-procedure.webp",
+    category: "DIGITAL SMILE DESIGN",
+    title:
+      "EVERYTHING YOU SHOULD KNOW ABOUT THE DIGITAL SMILE DESIGN PROCEDURE",
     excerpt:
-      "Understand how veneers can close gaps between teeth, how tooth proportions are planned, and what to expect during treatment.",
+      "A complete guide to digital smile design, treatment planning, and personalised smile makeovers.",
   },
+
+
 ];
 
 export default function BlogPage() {
