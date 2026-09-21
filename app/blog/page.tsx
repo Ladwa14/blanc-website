@@ -8,7 +8,7 @@ import Footer from "../sections/Footer";
 const blogs = [
   {
     slug: "digital-smile-design-procedure",
-    image: "/How_Do_Veneers_for_Gap_Teeth_Work.webp",
+    image: "/digital-smile-design-procedure.webp",
     category: "DIGITAL SMILE DESIGN",
     title:
       "EVERYTHING YOU SHOULD KNOW ABOUT THE DIGITAL SMILE DESIGN PROCEDURE",
