@@ -86,7 +86,7 @@ export default function Header({
     href="/craft"
     onClick={() => setMenuOpen(false)}
   >
-    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+    <span className="text-[18px] md:text-3xl font-playfair block py-1.5">
       The Craft
     </span>
   </Link>
@@ -95,7 +95,7 @@ export default function Header({
     href="/artisans"
     onClick={() => setMenuOpen(false)}
   >
-    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+    <span className="text-[18px] md:text-3xl font-playfair block py-1.5">
       The Artisans
     </span>
   </Link>
@@ -104,7 +104,7 @@ export default function Header({
     href="/esthetician"
     onClick={() => setMenuOpen(false)}
   >
-    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+    <span className="text-[18px] md:text-3xl font-playfair block py-1.5">
       The Esthetician
     </span>
   </Link>
@@ -113,7 +113,7 @@ export default function Header({
     href="/experience"
     onClick={() => setMenuOpen(false)}
   >
-    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+    <span className="text-[18px] md:text-3xl font-playfair block py-1.5">
       The Experience
     </span>
   </Link>
@@ -122,7 +122,7 @@ export default function Header({
     href="/process"
     onClick={() => setMenuOpen(false)}
   >
-    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+    <span className="text-[18px] md:text-3xl font-playfair block py-1.5">
       The Process
     </span>
   </Link>
@@ -140,7 +140,7 @@ export default function Header({
     href="/faq"
     onClick={() => setMenuOpen(false)}
   >
-    <span className="text-[22px] md:text-5xl font-playfair block py-1.5">
+    <span className="text-[18px] md:text-3xl font-playfair block py-1.5">
       FAQ
     </span>
   </Link>
