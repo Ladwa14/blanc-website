@@ -15,13 +15,24 @@ const blogs = [
     excerpt:
       "A complete guide to digital smile design, treatment planning, and personalised smile makeovers.",
   },
+
   {
     slug: "veneers-for-crooked-teeth",
-    image: "/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile_.webp",
+    image:
+      "/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile_.webp",
     category: "VENEERS",
     title: "VENEERS FOR CROOKED TEETH",
     excerpt:
       "Can veneers straighten your smile? Understanding how veneers can improve the appearance of mild alignment concerns.",
+  },
+
+  {
+    slug: "how-do-veneers-for-gap-teeth-work",
+    image: "/How_Do_Veneers_for_Gap_Teeth_Work.webp",
+    category: "VENEERS",
+    title: "HOW DO VENEERS FOR GAP TEETH WORK?",
+    excerpt:
+      "Understand how veneers can close gaps between teeth, how tooth proportions are planned, and what to expect during treatment.",
   },
 ];
 
@@ -78,7 +89,7 @@ export default function BlogPage() {
                   {/* CONTENT */}
                   <div className="pt-4">
 
-                    <p className="font-manrope font-bold text-[11px] tracking-[0.08em] text-[#111] ">
+                    <p className="font-manrope font-bold text-[11px] tracking-[0.08em] text-[#111]">
                       {blog.category}
                     </p>
 
@@ -92,7 +103,7 @@ export default function BlogPage() {
 
                     <div className="inline-block mt-5 pb-1 border-b border-black">
 
-                      <span className="font-manrope text-[11px] tracking-[0.18em] text-[#111] ">
+                      <span className="font-manrope text-[11px] tracking-[0.18em] text-[#111]">
                         READ MORE
                       </span>
 
