@@ -127,6 +127,17 @@ export default function Header({
             </span>
           </Link>
 
+
+<Link
+  href="/blog"
+  onClick={() => setMenuOpen(false)}
+>
+  <span className="text-3xl md:text-5xl font-playfair block py-2">
+    Blog
+  </span>
+</Link>
+
+
           <Link
   href="/faq"
   onClick={() => setMenuOpen(false)}
