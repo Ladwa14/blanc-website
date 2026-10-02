@@ -59,7 +59,7 @@ export default function BlogPage() {
         </h1>
 
         <p className="font-playfair text-[15px] md:text-[16px] mt-2">
-          Keep up with Blanc Esthetics
+          The Blanc Edit
         </p>
       </section>
 
