@@ -38,7 +38,7 @@ export default function VeneersForCrookedTeethPage() {
           <div className="max-w-[760px] mx-auto text-center pt-7 pb-10">
 
             <p className="font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
-              BLANC JOURNAL
+           
             </p>
 
             <h1 className="font-playfair text-3xl md:text-5xl text-[#222] leading-tight">

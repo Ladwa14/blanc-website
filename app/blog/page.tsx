@@ -54,14 +54,14 @@ export default function BlogPage() {
           BLOG HEADER
       ========================= */}
       <section className="bg-[#d3d3d3] text-black h-[200px] flex flex-col items-center justify-center">
-        <h1 className="font-manrope font-bold text-[18px] md:text-[20px]">
-          BLOG
-        </h1>
+  <h1 className="font-manrope font-bold text-[18px] md:text-[20px]">
+    BLOG
+  </h1>
 
-        <p className="font-playfair text-[15px] md:text-[16px] mt-2">
-          The Blanc Edit
-        </p>
-      </section>
+  <p className="font-playfair text-[15px] md:text-[16px] mt-2">
+    The Blanc Edit
+  </p>
+</section>
 
       {/* =========================
           BLOG GRID
