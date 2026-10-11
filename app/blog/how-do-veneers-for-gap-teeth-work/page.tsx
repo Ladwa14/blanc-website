@@ -31,18 +31,34 @@ export default function HowDoVeneersForGapTeethPage() {
             />
           </div>
 
-          {/* TITLE */}
-          <div className="max-w-[760px] mx-auto text-center pt-7 pb-10">
+        
+{/* TITLE */}
+<div className="max-w-[760px] mx-auto text-center pt-7 pb-10">
 
-            <p className="font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
-              
-            </p>
+  <h1 className="font-playfair text-3xl md:text-5xl text-[#222] leading-tight">
+    How Do Veneers for Gap Teeth Work?
+  </h1>
 
-            <h1 className="font-playfair text-3xl md:text-5xl text-[#222] leading-tight">
-              How Do Veneers for Gap Teeth Work?
-            </h1>
+  {/* AUTHOR AND PUBLISH DATE */}
+  <div className="flex flex-wrap items-center justify-center gap-3 mt-5 font-manrope text-[11px] md:text-xs text-gray-500">
 
-          </div>
+    <a
+      href="https://blancveneers.com/"
+      className="hover:text-[#222] transition-colors duration-300 underline underline-offset-4"
+    >
+      Blanc Veneers
+    </a>
+
+    <span aria-hidden="true">•</span>
+
+    <time dateTime="2026-10-11">
+      October 11, 2026
+    </time>
+
+  </div>
+
+</div>
+
         </div>
       </section>
 
