@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://www.blancveneers.com/Smile_Makeover_Procedures.webp",
+        url: "https://www.blancveneers.com/smile_beauty.webp",
         width: 1200,
         height: 675,
         alt: "Smile Makeover Procedures",

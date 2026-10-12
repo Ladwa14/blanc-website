@@ -142,7 +142,7 @@ export default function SmileMakeoverProcedurePage() {
           {/* BLOG IMAGE */}
           <div className="max-w-[760px] mx-auto">
             <img
-              src="/Smile_Makeover_Procedures.webp"
+              src="/smile_beauty.webp"
               alt="Smile Makeover Procedures"
               className="w-full aspect-[16/9] object-cover"
             />
