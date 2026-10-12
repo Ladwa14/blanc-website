@@ -1707,4 +1707,5 @@ export default function DigitalSmileDesignPage() {
     </>
 
   );
+
 }
