@@ -31,7 +31,10 @@ export default function DigitalSmileDesignPage() {
 
     <>
 
-      
+      <Header
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
 
       {/* BREADCRUMBS */}
       <nav
@@ -1704,4 +1707,5 @@ export default function DigitalSmileDesignPage() {
     </>
 
   );
+
 }
