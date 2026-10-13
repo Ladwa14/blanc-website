@@ -64,7 +64,7 @@ export default function BlogPage() {
      
 {/* BLOG HEADER */}
 <section className="bg-[#d3d3d3] text-black h-[200px] flex flex-col items-center justify-center">
-  <h1 className="font-manrope font-bold text-[18px] md:text-[20px]">
+  <h1 className="font-manrope font-bold text-[18px] md:text-[20px] pt-4">
     BLOG
   </h1>
 
@@ -76,7 +76,7 @@ export default function BlogPage() {
 {/* BREADCRUMBS */}
 <nav
   aria-label="Breadcrumb"
-  className="bg-white px-6 md:px-10 pt-6"
+  className="px-6 md:px-10 pt-6"
 >
   <div className="max-w-[1020px] mx-auto">
     <ol className="flex flex-wrap items-center justify-center gap-2 font-manrope text-[11px] md:text-xs text-[#777]">
