@@ -61,16 +61,43 @@ export default function BlogPage() {
         setMenuOpen={setMenuOpen}
       />
 
-      {/* BLOG HEADER */}
-      <section className="bg-[#d3d3d3] text-black h-[200px] flex flex-col items-center justify-center">
-        <h1 className="font-manrope font-bold text-[18px] md:text-[20px]">
-          BLOG
-        </h1>
+     
+{/* BLOG HEADER */}
+<section className="bg-[#d3d3d3] text-black h-[200px] flex flex-col items-center justify-center">
+  <h1 className="font-manrope font-bold text-[18px] md:text-[20px]">
+    BLOG
+  </h1>
 
-        <p className="font-playfair text-[15px] md:text-[16px] mt-2">
-          The Blanc Edit
-        </p>
-      </section>
+  <p className="font-playfair text-[15px] md:text-[16px] mt-2">
+    The Blanc Edit
+  </p>
+</section>
+
+{/* BREADCRUMBS */}
+<nav
+  aria-label="Breadcrumb"
+  className="bg-white px-6 md:px-10 pt-6"
+>
+  <div className="max-w-[1020px] mx-auto">
+    <ol className="flex flex-wrap items-center justify-center gap-2 font-manrope text-[11px] md:text-xs text-[#777]">
+      <li>
+        <Link
+          href="/"
+          className="hover:text-[#222] transition-colors duration-300"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li aria-hidden="true">&gt;</li>
+
+      <li className="text-[#222]" aria-current="page">
+        Blog
+      </li>
+    </ol>
+  </div>
+</nav>
+
 
       {/* BLOG GRID */}
       <section className="bg-[#ffffff] py-16 md:py-20 px-6 md:px-10">
@@ -94,9 +121,9 @@ export default function BlogPage() {
 
                   {/* CONTENT */}
                   <div className="pt-4">
-                    <p className="font-manrope font-bold text-[11px] tracking-[0.08em] text-[#111]">
+                    {/* <p className="font-manrope font-bold text-[11px] tracking-[0.08em] text-[#111]">
                       {blog.category}
-                    </p>
+                    </p> */}
 
                     <h2 className="font-manrope text-[12px] md:text-[13px] tracking-[0.13em] text-[#222] uppercase mt-1 leading-[1.5]">
                       {blog.title}
