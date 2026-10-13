@@ -46,7 +46,7 @@ export default function DigitalSmileDesignPage() {
 
       ========================= */}
 
-      <section className="bg-[#ffffff] px-6 md:px-8 pt-6 md:pt-8">
+      <section className="bg-[#ffffff] px-6 md:px-8 pt-6 md:pt-24">
 
         <div className="max-w-[1000px] mx-auto">
 
@@ -70,31 +70,47 @@ export default function DigitalSmileDesignPage() {
 
 
 
-           {/* BREADCRUMBS */}
-      <nav
-        aria-label="Breadcrumb"
-        className="bg-white px-6 md:px-8 pt-6"
+           
+    
+{/* BREADCRUMBS */}
+<nav
+  aria-label="Breadcrumb"
+  className="bg-white px-6 md:px-8 pt-6"
+>
+  <div className="max-w-[1000px] mx-auto flex justify-center">
+    <ol className="flex flex-wrap items-center justify-center gap-2 font-manrope text-[11px] md:text-xs text-[#777] text-center">
+      <li>
+        <Link
+          href="/"
+          className="hover:text-[#222] transition-colors duration-300"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li aria-hidden="true">&gt;</li>
+
+      <li>
+        <Link
+          href="/blog"
+          className="hover:text-[#222] transition-colors duration-300"
+        >
+          Blog
+        </Link>
+      </li>
+
+      <li aria-hidden="true">&gt;</li>
+
+      <li
+        className="text-[#222] min-w-0"
+        aria-current="page"
       >
-        <div className="max-w-[1000px] mx-auto">
-          <ol className="flex flex-wrap items-center gap-2 font-manrope text-[11px] md:text-xs text-[#777]">
-            <li>
-              <Link href="/" className="hover:text-[#222] transition-colors duration-300">
-                Home
-              </Link>
-            </li>
-            <li aria-hidden="true">&gt;</li>
-            <li>
-              <Link href="/blog" className="hover:text-[#222] transition-colors duration-300">
-                Blog
-              </Link>
-            </li>
-            <li aria-hidden="true">&gt;</li>
-            <li className="text-[#222] min-w-0" aria-current="page">
-              Everything You Should Know About the Digital Smile Design Procedure
-            </li>
-          </ol>
-        </div>
-      </nav>
+        Everything You Should Know About the Digital Smile Design Procedure
+      </li>
+    </ol>
+  </div>
+</nav>
+
 
 
 

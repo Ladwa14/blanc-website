@@ -10,7 +10,7 @@ const blogs = [
   {
     slug: "porcelain-veneers-guide",
     image: "/porcelain_veneers.webp",
-    category: "VENEERS",
+    
     title: "EVERYTHING YOU SHOULD KNOW ABOUT PORCELAIN VENEERS",
     excerpt:
       "Learn how porcelain veneers work, what the procedure involves, and how to care for your veneers for long-lasting results.",
@@ -18,7 +18,7 @@ const blogs = [
   {
     slug: "smile-makeover-procedure-explained",
     image: "/smile_beauty.webp",
-    category: "SMILE MAKEOVER",
+    
     title: "SMILE MAKEOVER PROCEDURES EXPLAINED",
     excerpt:
       "Explore the steps involved in a smile makeover, from consultation and digital smile design to treatment and final results.",
@@ -26,7 +26,7 @@ const blogs = [
   {
     slug: "how-do-veneers-for-gap-teeth-work",
     image: "/How_Do_Veneers_for_Gap_Teeth_Work.webp",
-    category: "VENEERS",
+    
     title: "HOW DO VENEERS FOR GAP TEETH WORK?",
     excerpt:
       "Understand how veneers can close gaps between teeth, how tooth proportions are planned, and what to expect during treatment.",
@@ -35,7 +35,7 @@ const blogs = [
     slug: "veneers-for-crooked-teeth",
     image:
       "/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile_.webp",
-    category: "VENEERS",
+   
     title: "VENEERS FOR CROOKED TEETH",
     excerpt:
       "Can veneers straighten your smile? Understand how veneers can improve the appearance of mild alignment concerns.",
@@ -43,7 +43,7 @@ const blogs = [
   {
     slug: "digital-smile-design-procedure",
     image: "/digital-smile-design-procedure.webp",
-    category: "DIGITAL SMILE DESIGN",
+    
     title:
       "EVERYTHING YOU SHOULD KNOW ABOUT THE DIGITAL SMILE DESIGN PROCEDURE",
     excerpt:

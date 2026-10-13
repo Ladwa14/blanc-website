@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Header from "../../sections/Header";
 import Footer from "../../sections/Footer";
 
@@ -147,6 +148,49 @@ export default function SmileMakeoverProcedurePage() {
               className="w-full aspect-[16/9] object-cover"
             />
           </div>
+
+
+
+{/* BREADCRUMBS */}
+<nav
+  aria-label="Breadcrumb"
+  className="bg-white px-6 md:px-8 pt-6"
+>
+  <div className="max-w-[1000px] mx-auto flex justify-center">
+    <ol className="flex flex-wrap items-center justify-center gap-2 font-manrope text-[11px] md:text-xs text-[#777] text-center">
+      <li>
+        <Link
+          href="/"
+          className="hover:text-[#222] transition-colors duration-300"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li aria-hidden="true">&gt;</li>
+
+      <li>
+        <Link
+          href="/blog"
+          className="hover:text-[#222] transition-colors duration-300"
+        >
+          Blog
+        </Link>
+      </li>
+
+      <li aria-hidden="true">&gt;</li>
+
+      <li
+        className="text-[#222] min-w-0"
+        aria-current="page"
+      >
+        Smile Makeover Procedures Explained
+      </li>
+    </ol>
+  </div>
+</nav>  
+
+
 
           {/* TITLE */}
           <div className="max-w-[760px] mx-auto text-center pt-7 pb-10">
