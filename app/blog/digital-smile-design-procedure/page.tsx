@@ -46,7 +46,10 @@ export default function DigitalSmileDesignPage() {
 
       ========================= */}
 
-      <section className="bg-[#ffffff] px-6 md:px-8 pt-6 md:pt-24">
+      <section
+  className="bg-[#ffffff] px-6 md:px-8"
+  style={{ paddingTop: "80px" }}
+>
 
         <div className="max-w-[1000px] mx-auto">
 

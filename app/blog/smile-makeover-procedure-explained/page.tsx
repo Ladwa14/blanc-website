@@ -138,7 +138,10 @@ export default function SmileMakeoverProcedurePage() {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       {/* BLOG HERO */}
-      <section className="bg-[#ffffff] px-6 md:px-8 pt-10 md:pt-16">
+    <section
+  className="bg-[#ffffff] px-6 md:px-8"
+  style={{ paddingTop: "80px" }}
+>
         <div className="max-w-[1000px] mx-auto">
           {/* BLOG IMAGE */}
           <div className="max-w-[760px] mx-auto">
