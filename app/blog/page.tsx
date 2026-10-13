@@ -71,7 +71,7 @@ export default function BlogPage() {
   <p className="font-playfair text-[15px] md:text-[16px] mt-2">
     The Blanc Edit
   </p>
-</section>
+
 
 {/* BREADCRUMBS */}
 <nav
@@ -97,6 +97,11 @@ export default function BlogPage() {
     </ol>
   </div>
 </nav>
+
+
+</section>
+
+
 
 
       {/* BLOG GRID */}
