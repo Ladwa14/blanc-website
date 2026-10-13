@@ -29,7 +29,7 @@ export default function VeneersForCrookedTeethPage() {
           {/* BLOG IMAGE */}
           <div className="max-w-[760px] mx-auto">
             <img
-              src="/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile_.webp"
+              src="/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile.webp"
               alt="Veneers for Crooked Teeth"
               className="w-full aspect-[16/9] object-cover"
             />

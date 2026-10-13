@@ -34,7 +34,7 @@ const blogs = [
   {
     slug: "veneers-for-crooked-teeth",
     image:
-      "/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile_.webp",
+      "/Veneers_for_Crooked_Teeth_Can_Veneers_Straighten_Your_Smile.webp",
    
     title: "VENEERS FOR CROOKED TEETH",
     excerpt:
@@ -42,7 +42,7 @@ const blogs = [
   },
   {
     slug: "digital-smile-design-procedure",
-    image: "/digital-smile-design-procedure.webp",
+    image: "/Everything_You_Should_Know_About_the_Digital_Smile_Design_Procedure.webp",
     
     title:
       "EVERYTHING YOU SHOULD KNOW ABOUT THE DIGITAL SMILE DESIGN PROCEDURE",

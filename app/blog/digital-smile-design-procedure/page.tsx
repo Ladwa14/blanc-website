@@ -58,7 +58,7 @@ export default function DigitalSmileDesignPage() {
 
             <img
 
-              src="/digital-smile-design-procedure.webp"
+              src="/Everything_You_Should_Know_About_the_Digital_Smile_Design_Procedure.webp"
 
               alt="Digital Smile Design Procedure"
 
