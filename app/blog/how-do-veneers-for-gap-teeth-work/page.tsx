@@ -93,7 +93,7 @@ export default function HowDoVeneersForGapTeethPage() {
     <span aria-hidden="true">•</span>
 
     <time dateTime="2026-10-11">
-      October 11, 2026
+      September 12, 2026
     </time>
 
   </div>

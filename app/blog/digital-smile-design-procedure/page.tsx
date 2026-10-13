@@ -133,7 +133,7 @@ export default function DigitalSmileDesignPage() {
 
               <span aria-hidden="true">•</span>
 
-              <time dateTime="2026-10-11">October 11, 2026</time>
+              <time dateTime="2026-10-11">August 3, 2026</time>
             </div>
 
           </div>
