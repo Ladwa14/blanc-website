@@ -6,13 +6,18 @@ import Footer from "../sections/Footer";
 import Header from "../sections/Header";
 
 const images = [
-  "/The_experience_image_1.webp",
-  "/The_Experience_image_.webp",
-  "/Experience_section_image.webp"
-  // "/Blanc_website_2.webp",
-  // "/Smile.webp",
-  // "/Above_the_fold_3.webp",
-  // "/Above_the_fold_4.webp",
+  {
+    src: "/The_experience_image_1.webp",
+    alt: "Patient getting a digital 3D teeth scan",
+  },
+  {
+    src: "/The_Experience_image_.webp",
+    alt: "Close-up of bright, white veneer teeth",
+  },
+  {
+    src: "/Experience_section_image.webp",
+    alt: "Happy patient admiring her new smile",
+  },
 ];
 
 export default function Page() {
