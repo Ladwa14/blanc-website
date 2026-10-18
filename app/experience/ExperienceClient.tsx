@@ -176,10 +176,11 @@ export default function Page() {
             >
               {images.map((img, i) => (
                 <img
-                  key={i}
-                  src={img}
-                  className="w-full h-full object-cover flex-shrink-0"
-                />
+  key={img.src}
+  src={img.src}
+  alt={img.alt}
+  className="w-full h-full object-cover flex-shrink-0"
+/>
               ))}
             </div>
 
