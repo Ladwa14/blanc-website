@@ -13,13 +13,31 @@ export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const imageList = [
-    "/Blanc_website_2.webp",
-    "/Smile.webp",
-    "/homeimage_3.webp",
-    "/homeimage_4.webp",
-    "/homeimage_5.webp",
-    "/Above_the_fold_last_image.webp"
-  ];
+  {
+    src: "/Blanc_website_2.webp",
+    alt: "Blanc Veneers clinic",
+  },
+  {
+    src: "/Smile.webp",
+    alt: "Bright, natural-looking smile",
+  },
+  {
+    src: "/homeimage_3.webp",
+    alt: "Before and after smile",
+  },
+  {
+    src: "/homeimage_4.webp",
+    alt: "Dentist consulting with patient",
+  },
+  {
+    src: "/homeimage_5.webp",
+    alt: "Porcelain veneers dental treatment",
+  },
+  {
+    src: "/Above_the_fold_last_image.webp",
+    alt: "Confident smile after veneers",
+  },
+];
 
   const isScrolling = useRef(false);
 
@@ -188,21 +206,21 @@ return () => {
 
       {/* 🔥 SLIDE IMAGES */}
       {imageList.map((img, i) => (
-        <img
-          key={i}
-          src={img}
-          className={`absolute w-full h-full object-cover object-[center_45%] will-change-transform
-          transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]
-          
-          ${
-            i === activeIndex
-              ? "translate-y-0 z-10"
-              : i < activeIndex
-              ? "-translate-y-full z-10"
-              : "translate-y-full z-10"
-          }
-          `}
-        />
+       <img
+  key={imageList[i].src}
+  src={imageList[i].src}
+  alt={imageList[i].alt}
+  className={`absolute w-full h-full object-cover object-[center_45%] will-change-transform
+  transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]
+  ${
+    i === activeIndex
+      ? "translate-y-0 z-10"
+      : i < activeIndex
+      ? "-translate-y-full z-10"
+      : "translate-y-full z-10"
+  }
+  `}
+/>
       ))}
 
       {/* Overlay */}
