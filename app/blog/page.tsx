@@ -7,6 +7,24 @@ import Header from "../sections/Header";
 import Footer from "../sections/Footer";
 
 const blogs = [
+
+    {
+    slug: "composite-veneers-vs-ceramic-veneers",
+    image: "/composite-veneers-vs-ceramic-veneers.webp",
+
+    title: "COMPOSITE VENEERS VS CERAMIC VENEERS",
+    excerpt:
+      "Understand the differences between composite and ceramic veneers, including materials, aesthetics, durability and which option may suit your smile.",
+  },
+  {
+    slug: "what-is-cosmetic-dentistry",
+    image: "/what-is-cosmetic-dentistry.webp",
+
+    title: "WHAT IS COSMETIC DENTISTRY? A COMPLETE GUIDE",
+    excerpt:
+      "Discover cosmetic dentistry treatments, their benefits, the treatment process and how personalised smile design can transform your smile.",
+  },
+
   {
     slug: "porcelain-veneers-guide",
     image: "/porcelain_veneers.webp",
