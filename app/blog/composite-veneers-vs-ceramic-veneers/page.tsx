@@ -31,7 +31,7 @@ export default function CompositeCeramicVeneersPage() {
 
           <div className="max-w-[760px] mx-auto">
             <img
-              src="/Composite_Veneers_vs_Ceramic_Veneers.webp"
+              src="/composite-veneers-vs-ceramic-veneers.webp"
               alt="Composite Veneers vs Ceramic Veneers"
               className="w-full aspect-[16/9] object-cover"
             />

@@ -74,7 +74,7 @@ export default function CosmeticDentistryPage() {
 
           <div className="max-w-[760px] mx-auto">
             <img
-              src="/What_Is_Cosmetic_Dentistry.webp"
+              src="/what-is-cosmetic-dentistry.webp"
               alt="Cosmetic Dentistry"
               className="w-full aspect-[16/9] object-cover"
             />
